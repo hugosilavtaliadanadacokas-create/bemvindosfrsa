@@ -1,1 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Altenburg Têxtil | Artefatos Têxteis para uso doméstico</title>
+    <!-- Bootstrap 5 + Ícones + CSS personalizado -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (biblioteca oficial de ícones) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts para um toque elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefaf5;
+            color: #2c2b28;
+            scroll-behavior: smooth;
+        }
+        /* Cores personalizadas base: terrosos, algodão e azul brando */
+        :root {
+            --altenburg-cream: #fdf8f0;
+            --altenburg-terracota: #b87b5a;
+            --altenburg-navy: #2e5a6e;
+            --altenburg-bege: #e7d9ce;
+            --altenburg-cinza-claro: #f0ede8;
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            transition: all 0.3s;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--altenburg-navy) !important;
+            font-size: 1.6rem;
+        }
+        .navbar-brand span {
+            color: var(--altenburg-terracota);
+            font-weight: 300;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #4b4a47 !important;
+            margin: 0 0.3rem;
+            transition: 0.2s;
+        }
+        .nav-link:hover {
+            color: var(--altenburg-terracota) !important;
+        }
+        .btn-altenburg {
+            background-color: var(--altenburg-terracota);
+            border: none;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            font-weight: 500;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        .btn-altenburg:hover {
+            background-color: #9c5e3e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        }
+        .hero {
+            background: linear-gradient(120deg, #fffaf3 0%, #f7efe5 100%);
+            padding: 5rem 0 4rem 0;
+            border-bottom: 1px solid rgba(184,123,90,0.2);
+        }
+        .hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            color: #2a4b5c;
+            letter-spacing: -0.02em;
+        }
+        .hero .highlight {
+            color: var(--altenburg-terracota);
+        }
+        .hero p.lead {
+            color: #5e5b56;
+        }
+        .icone-card {
+            font-size: 2.5rem;
+            color: var(--altenburg-terracota);
+            margin-bottom: 1rem;
+        }
+        .card-sobre {
+            border: none;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+            transition: all 0.25s ease;
+            height: 100%;
+        }
+        .card-sobre:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 32px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            position: relative;
+            font-weight: 700;
+            color: #2a4b5c;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--altenburg-terracota);
+            border-radius: 3px;
+        }
+        .bg-bege-claro {
+            background-color: var(--altenburg-cinza-claro);
+        }
+        footer {
+            background-color: #1f3e48;
+            color: #dfddd9;
+        }
+        footer a {
+            color: #e2c7b9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .info-box {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.03);
+            height: 100%;
+        }
+        .bi-telephone, .bi-geo-alt, .bi-envelope {
+            color: var(--altenburg-terracota);
+        }
+        .badge-cnpj {
+            background-color: #e2d5cb;
+            color: #4e3e34;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Navbar / Menu principal -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">ALTENBURG<span>Têxtil</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+                <a href="#contato" class="btn btn-altenburg">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section com frase impacto -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <h1 class="mb-3">Tecendo conforto para <span class="highlight">seu lar</span> desde 2005</h1>
+                    <p class="lead mb-4">Artefatos têxteis de alta qualidade para uso doméstico: jogo de cama, toalhas, mantas e muito mais. Tradição e inovação no coração de Blumenau.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#produtos" class="btn btn-altenburg">Conheça nossa linha</a>
+                        <a href="#contato" class="btn btn-outline-secondary rounded-pill px-4">Solicitar orçamento</a>
+                    </div>
+                    <div class="mt-4 d-flex gap-4 flex-wrap">
+                        <div><i class="bi bi-truck fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Entrega nacional</span></div>
+                        <div><i class="bi bi-shield-check fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Selos de qualidade</span></div>
+                        <div><i class="bi bi-recycle fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Fibras sustentáveis</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <i class="bi bi-basket3 fs-1" style="font-size: 8rem; color: #d9bfaa;"></i>
+                    <!-- Ícone decorativo representando têxtil caseiro -->
+                    <div class="mt-3"><span class="badge-cnpj"><i class="bi bi-buildings me-1"></i> Indústria brasileira</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre + dados institucionais -->
+    <section id="sobre" class="py-5 bg-bege-claro">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <span class="text-uppercase small text-secondary fw-semibold"><i class="bi bi-tags"></i> Quem somos</span>
+                    <h2 class="section-title mt-2">Excelência têxtil com alma caseira</h2>
+                    <p class="mt-3">A <strong>Altenburg Têxtil S.A.</strong> é referência nacional na fabricação de artefatos têxteis para uso doméstico. Nossos produtos unem design, conforto e durabilidade, transformando lares com sofisticação e aconchego.</p>
+                    <p>Com mais de 18 anos de atuação, produzimos lençóis, edredons, toalhas de banho, jogos americanos e itens de cama, mesa e banho com tecnologia de ponta e matéria-prima selecionada. Nossa fábrica está estrategicamente localizada em Blumenau (SC), polo têxtil do Brasil.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="info-box">
+                                <i class="bi bi-calendar-check fs-2"></i>
+                                <h5 class="mt-2">+18 anos</h5>
+                                <p class="small">de tradição e excelência no mercado têxtil doméstico</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="info-box">
+                                <i class="bi bi-people fs-2"></i>
+                                <h5 class="mt-2">Equipe especializada</h5>
+                                <p class="small">Profissionais comprometidos com cada detalhe têxtil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-sobre p-4 h-100">
+                        <i class="bi bi-building icone-card"></i>
+                        <h4 class="fw-bold mt-1">Dados cadastrais</h4>
+                        <hr>
+                        <p><i class="bi bi-bank2 me-2"></i><strong>Razão Social:</strong> Altenburg Textil S.a.</p>
+                        <p><i class="bi bi-person-badge me-2"></i><strong>Nome Fantasia:</strong> Altenburg Textil S.a.</p>
+                        <p><i class="bi bi-card-text me-2"></i><strong>CNPJ:</strong> 75.293.662/0001-04</p>
+                        <p><i class="bi bi-calendar me-2"></i><strong>Data Situação Cadastral:</strong> 03/11/2005</p>
+                        <p><i class="bi bi-geo-alt me-2"></i><strong>Matriz / Fábrica:</strong><br> Rodovia Br 470, 7235 - Badenfurt<br> Blumenau - SC | CEP: 89070-205</p>
+                        <div class="mt-3">
+                            <span class="badge bg-light text-dark p-2 me-2"><i class="bi bi-check-circle-fill text-success"></i> Situação ativa</span>
+                            <span class="badge bg-light text-dark p-2"><i class="bi bi-trophy-fill" style="color:#b87b5a;"></i> Certificações ABIT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos / Artefatos têxteis para uso doméstico (cards com ícones) -->
+    <section id="produtos" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="text-uppercase small text-secondary fw-semibold">Nossos artefatos</span>
+                <h2 class="section-title" style="display: inline-block; margin-bottom: 0.5rem;">Têxteis que abraçam seu lar</h2>
+                <p class="mt-3 mx-auto" style="max-width: 700px;">Conforto, sofisticação e qualidade para cada ambiente da sua casa.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-house-door icone-card"></i>
+                        <h4>Jogos de cama</h4>
+                        <p>Lençóis 100% algodão, microfibra e percal. Kits completos com edredons e fronhas estampadas.</p>
+                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-half text-warning small"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-droplet icone-card"></i>
+                        <h4>Toalhas de banho</h4>
+                        <p>Toalhas felpudas, macias e alta absorção. Conjuntos para banho, rosto e tapetes antiderrapantes.</p>
+                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-moon-stars icone-card"></i>
+                        <h4>Mantas & Cobertores</h4>
+                        <p>Manta sherpa, cobertores térmicos e peças versáteis para noites aconchegantes.</p>
+                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-cup-straw icone-card"></i>
+                        <h4>Jogos americanos</h4>
+                        <p>Toalhas de mesa, jogos americanos em algodão e jacquard, perfeitos para cozinha e sala de jantar.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-symmetry-vertical icone-card"></i>
+                        <h4>Cortinas e painéis</h4>
+                        <p>Tecidos leves e blackout para personalizar ambientes com elegância e funcionalidade.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-sobre p-4 text-center">
+                        <i class="bi bi-egg-fried icone-card"></i>
+                        <h4>Acessórios cozinha</h4>
+                        <p>Panos de prato, luvas térmicas, aventais e itens decorativos têxteis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <i class="bi bi-chat-quote fs-4 me-1"></i> <span class="fst-italic">"Tecnologia têxtil com alma artesanal: tradição que aquece lares"</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frases & Diferenciais (bloco de citação com ícones) -->
+    <section class="py-5 bg-bege-claro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row text-center g-4">
+                        <div class="col-md-4">
+                            <i class="bi bi-gem fs-1" style="color: #b87b5a;"></i>
+                            <h5 class="mt-3 fw-bold">Design exclusivo</h5>
+                            <p>Coleções assinadas por designers especializados em home & living.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="bi bi-tree fs-1" style="color: #b87b5a;"></i>
+                            <h5 class="mt-3 fw-bold">Algodão sustentável</h5>
+                            <p>Matérias-primas com rastreabilidade e respeito ao meio ambiente.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="bi bi-tools fs-1" style="color: #b87b5a;"></i>
+                            <h5 class="mt-3 fw-bold">Tecnologia têxtil</h5>
+                            <p>Processos modernos que garantem toque macio e maior durabilidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-3">
+                <div class="col-12 text-center">
+                    <div class="p-4 bg-white rounded-4 shadow-sm d-inline-block px-5">
+                        <i class="bi bi-quote fs-1 opacity-50"></i>
+                        <p class="fs-5 fw-light mb-0">"Qualidade e conforto que transformam cada cômodo em um verdadeiro refúgio."</p>
+                        <p class="mt-2 fw-semibold">— Altenburg Têxtil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato + Mapa, telefone, endereço detalhado -->
+    <section id="contato" class="py-5">
+        <div class="container py-4">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Fale com a Altenburg</h2>
+                    <p class="mb-4">Entre em contato para parcerias, vendas ou informações sobre nossos artefatos têxteis. Atendimento de segunda a sexta, das 8h às 18h.</p>
+                    <div class="mb-4 d-flex align-items-start">
+                        <i class="bi bi-telephone-fill fs-3 me-3" style="color:#b87b5a;"></i>
+                        <div><strong>Telefone / WhatsApp</strong><br> (47) 3331-1500</div>
+                    </div>
+                    <div class="mb-4 d-flex align-items-start">
+                        <i class="bi bi-envelope-fill fs-3 me-3" style="color:#b87b5a;"></i>
+                        <div><strong>E-mail comercial</strong><br> contato@altenburgtextil.com.br (sugestão) / Fale conosco via formulário ou telefone</div>
+                    </div>
+                    <div class="mb-4 d-flex align-items-start">
+                        <i class="bi bi-pin-map-fill fs-3 me-3" style="color:#b87b5a;"></i>
+                        <div><strong>Visite nossa fábrica-showroom</strong><br> Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC<br> CEP: 89070-205</div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="tel:4733311500" class="btn btn-altenburg rounded-pill me-2"><i class="bi bi-whatsapp"></i> Ligar agora</a>
+                        <a href="#" class="btn btn-outline-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#modalMapa"><i class="bi bi-map"></i> Ver no mapa</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-sobre p-4">
+                        <h4 class="mb-3"><i class="bi bi-chat-dots"></i> Envie uma mensagem</h4>
+                        <form id="formContato" action="#" method="post">
+                            <div class="mb-3">
+                                <label class="form-label">Nome completo</label>
+                                <input type="text" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">E-mail</label>
+                                <input type="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Assunto</label>
+                                <input type="text" class="form-control" placeholder="Ex: Orçamento de jogos de cama">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensagem</label>
+                                <textarea class="form-control" rows="3" placeholder="Gostaria de saber mais sobre seus produtos..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-altenburg w-100">Enviar mensagem <i class="bi bi-send"></i></button>
+                            <p class="small text-muted mt-2">Responderemos em até 24h úteis.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé completo com informações legais, CNPJ, endereço -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4">
+                    <h5 class="fw-bold text-white">ALTENBURG TÊXTIL S.A.</h5>
+                    <p class="small">Fabricação de artefatos têxteis para uso doméstico com excelência e inovação. Orgulho catarinense desde 2005.</p>
+                    <div><i class="bi bi-c-circle"></i> 2025 Altenburg - Todos os direitos reservados.</div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-semibold"><i class="bi bi-info-circle"></i> Institucional</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#sobre" class="text-white-50 text-decoration-none">Sobre a empresa</a></li>
+                        <li><a href="#produtos" class="text-white-50 text-decoration-none">Linha de produtos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Trabalhe conosco</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Política de qualidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-semibold"><i class="bi bi-pin"></i> Localização</h6>
+                    <address class="small">
+                        Rodovia Br 470, 7235 - Badenfurt<br>
+                        Blumenau - SC, 89070-205<br>
+                        <i class="bi bi-telephone"></i> (47) 3331-1500<br>
+                        <i class="bi bi-envelope"></i> altenburg@contato.com.br
+                    </address>
+                    <div class="mt-2">
+                        <a href="#" class="text-white-50 me-2"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50 me-2"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row small">
+                <div class="col-md-6">
+                    <i class="bi bi-card-list"></i> CNPJ: 75.293.662/0001-04 | Razão Social: Altenburg Textil S.a.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    Data Situação Cadastral: 03/11/2005 - Ativa
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Mapa (Simulação com iframe google maps adaptado para Blumenau - BR 470) -->
+    <div class="modal fade" id="modalMapa" tabindex="-1" aria-labelledby="modalMapaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMapaLabel"><i class="bi bi-geo-alt-fill"></i> Altenburg - Localização</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe src="https://maps.google.com/maps?q=Rodovia+BR-470,+7235+-+Badenfurt,+Blumenau+-+SC,+89070-205&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="p-3 bg-light">
+                        <p><strong>Endereço:</strong> Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC | CEP: 89070-205</p>
+                        <p class="mb-0"><i class="bi bi-clock"></i> Visitas mediante agendamento pelo telefone (47) 3331-1500.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script básico para alerta de formulário (não envia realmente, apenas feedback) -->
+    <script>
+        document.getElementById('formContato')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Em breve nossa equipe entrará em contato. Obrigado por confiar na Altenburg Têxtil.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
