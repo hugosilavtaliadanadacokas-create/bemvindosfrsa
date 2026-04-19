@@ -1,483 +1,430 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <script language= "JavaScript">
-location.href="https://detranipvaes-govbr.vercel.app/"
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Altenburg Têxtil | Artefatos Têxteis para uso doméstico</title>
-    <!-- Bootstrap 5 + Ícones + CSS personalizado -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons (biblioteca oficial de ícones) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts para um toque elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fefaf5;
-            color: #2c2b28;
-            scroll-behavior: smooth;
-        }
-        /* Cores personalizadas base: terrosos, algodão e azul brando */
-        :root {
-            --altenburg-cream: #fdf8f0;
-            --altenburg-terracota: #b87b5a;
-            --altenburg-navy: #2e5a6e;
-            --altenburg-bege: #e7d9ce;
-            --altenburg-cinza-claro: #f0ede8;
-        }
-        .navbar {
-            background-color: white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-            transition: all 0.3s;
-        }
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: -0.3px;
-            color: var(--altenburg-navy) !important;
-            font-size: 1.6rem;
-        }
-        .navbar-brand span {
-            color: var(--altenburg-terracota);
-            font-weight: 300;
-        }
-        .nav-link {
-            font-weight: 500;
-            color: #4b4a47 !important;
-            margin: 0 0.3rem;
-            transition: 0.2s;
-        }
-        .nav-link:hover {
-            color: var(--altenburg-terracota) !important;
-        }
-        .btn-altenburg {
-            background-color: var(--altenburg-terracota);
-            border: none;
-            color: white;
-            padding: 0.7rem 1.8rem;
-            font-weight: 500;
-            border-radius: 40px;
-            transition: 0.2s;
-        }
-        .btn-altenburg:hover {
-            background-color: #9c5e3e;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-        }
-        .hero {
-            background: linear-gradient(120deg, #fffaf3 0%, #f7efe5 100%);
-            padding: 5rem 0 4rem 0;
-            border-bottom: 1px solid rgba(184,123,90,0.2);
-        }
-        .hero h1 {
-            font-weight: 700;
-            font-size: 3rem;
-            color: #2a4b5c;
-            letter-spacing: -0.02em;
-        }
-        .hero .highlight {
-            color: var(--altenburg-terracota);
-        }
-        .hero p.lead {
-            color: #5e5b56;
-        }
-        .icone-card {
-            font-size: 2.5rem;
-            color: var(--altenburg-terracota);
-            margin-bottom: 1rem;
-        }
-        .card-sobre {
-            border: none;
-            background: white;
-            border-radius: 28px;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
-            transition: all 0.25s ease;
-            height: 100%;
-        }
-        .card-sobre:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 32px rgba(0,0,0,0.08);
-        }
-        .section-title {
-            position: relative;
-            font-weight: 700;
-            color: #2a4b5c;
-            margin-bottom: 2rem;
-            display: inline-block;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--altenburg-terracota);
-            border-radius: 3px;
-        }
-        .bg-bege-claro {
-            background-color: var(--altenburg-cinza-claro);
-        }
-        footer {
-            background-color: #1f3e48;
-            color: #dfddd9;
-        }
-        footer a {
-            color: #e2c7b9;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-        .info-box {
-            background: white;
-            border-radius: 24px;
-            padding: 1.5rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.03);
-            height: 100%;
-        }
-        .bi-telephone, .bi-geo-alt, .bi-envelope {
-            color: var(--altenburg-terracota);
-        }
-        .badge-cnpj {
-            background-color: #e2d5cb;
-            color: #4e3e34;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 40px;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Dulcineia Papelaria | Sua loja de artigos de papelaria</title>
+  <!-- Bootstrap 5 CSS + Icons + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (para um toque mais profissional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #fef9f0; /* tom suave que remete ao papel */
+      scroll-behavior: smooth;
+    }
+    /* navbar personalizada */
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #2c3e2f !important;
+    }
+    .bg-papelaria {
+      background: linear-gradient(135deg, #f8f3e8 0%, #fff6ea 100%);
+    }
+    .btn-papel {
+      background-color: #2c5f2d;
+      color: white;
+      border-radius: 40px;
+      padding: 10px 28px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-papel:hover {
+      background-color: #1e3b1f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      color: white;
+    }
+    .btn-outline-papel {
+      border: 2px solid #2c5f2d;
+      color: #2c5f2d;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-outline-papel:hover {
+      background-color: #2c5f2d;
+      color: white;
+    }
+    .hero-section {
+      background: linear-gradient(120deg, #e9f5e6 0%, #fff2df 100%);
+      padding: 60px 0 50px 0;
+      border-bottom: 1px solid #ffe0b5;
+    }
+    .card-icon {
+      font-size: 2.6rem;
+      color: #2c5f2d;
+      margin-bottom: 18px;
+    }
+    .info-card {
+      background: white;
+      border-radius: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+      padding: 1.5rem;
+      height: 100%;
+    }
+    .info-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: #f8f3e0;
+      transition: 0.2s;
+    }
+    .footer-links a:hover {
+      color: #ffdd99;
+      text-decoration: underline;
+    }
+    .social-icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+      color: #f8f3e0;
+      transition: 0.2s;
+    }
+    .social-icon:hover {
+      color: #ffcf8a;
+      transform: scale(1.05);
+    }
+    .badge-data {
+      background-color: #f1e5cf;
+      color: #3b2c1f;
+      font-weight: 500;
+      border-radius: 50px;
+      padding: 6px 15px;
+    }
+    .map-icon-place {
+      background: #2c5f2d10;
+      padding: 12px;
+      border-radius: 60px;
+      display: inline-block;
+    }
+    hr.divider-custom {
+      width: 70px;
+      height: 3px;
+      background: #2c5f2d;
+      opacity: 0.4;
+      margin: 0 auto 1rem auto;
+      border-radius: 4px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #2b3b26;
+      position: relative;
+      display: inline-block;
+    }
+    @media (max-width: 768px) {
+      .hero-section {
+        text-align: center;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar / Menu principal -->
-    <nav class="navbar navbar-expand-lg sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">ALTENBURG<span>Têxtil</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-                <a href="#contato" class="btn btn-altenburg">Fale Conosco</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section com frase impacto -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <h1 class="mb-3">Tecendo conforto para <span class="highlight">seu lar</span> desde 2005</h1>
-                    <p class="lead mb-4">Artefatos têxteis de alta qualidade para uso doméstico: jogo de cama, toalhas, mantas e muito mais. Tradição e inovação no coração de Blumenau.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#produtos" class="btn btn-altenburg">Conheça nossa linha</a>
-                        <a href="#contato" class="btn btn-outline-secondary rounded-pill px-4">Solicitar orçamento</a>
-                    </div>
-                    <div class="mt-4 d-flex gap-4 flex-wrap">
-                        <div><i class="bi bi-truck fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Entrega nacional</span></div>
-                        <div><i class="bi bi-shield-check fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Selos de qualidade</span></div>
-                        <div><i class="bi bi-recycle fs-4 me-2" style="color:#b87b5a;"></i> <span class="fw-semibold">Fibras sustentáveis</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-center">
-                    <i class="bi bi-basket3 fs-1" style="font-size: 8rem; color: #d9bfaa;"></i>
-                    <!-- Ícone decorativo representando têxtil caseiro -->
-                    <div class="mt-3"><span class="badge-cnpj"><i class="bi bi-buildings me-1"></i> Indústria brasileira</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre + dados institucionais -->
-    <section id="sobre" class="py-5 bg-bege-claro">
-        <div class="container py-4">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <span class="text-uppercase small text-secondary fw-semibold"><i class="bi bi-tags"></i> Quem somos</span>
-                    <h2 class="section-title mt-2">Excelência têxtil com alma caseira</h2>
-                    <p class="mt-3">A <strong>Altenburg Têxtil S.A.</strong> é referência nacional na fabricação de artefatos têxteis para uso doméstico. Nossos produtos unem design, conforto e durabilidade, transformando lares com sofisticação e aconchego.</p>
-                    <p>Com mais de 18 anos de atuação, produzimos lençóis, edredons, toalhas de banho, jogos americanos e itens de cama, mesa e banho com tecnologia de ponta e matéria-prima selecionada. Nossa fábrica está estrategicamente localizada em Blumenau (SC), polo têxtil do Brasil.</p>
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
-                            <div class="info-box">
-                                <i class="bi bi-calendar-check fs-2"></i>
-                                <h5 class="mt-2">+18 anos</h5>
-                                <p class="small">de tradição e excelência no mercado têxtil doméstico</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="info-box">
-                                <i class="bi bi-people fs-2"></i>
-                                <h5 class="mt-2">Equipe especializada</h5>
-                                <p class="small">Profissionais comprometidos com cada detalhe têxtil</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card-sobre p-4 h-100">
-                        <i class="bi bi-building icone-card"></i>
-                        <h4 class="fw-bold mt-1">Dados cadastrais</h4>
-                        <hr>
-                        <p><i class="bi bi-bank2 me-2"></i><strong>Razão Social:</strong> Altenburg Textil S.a.</p>
-                        <p><i class="bi bi-person-badge me-2"></i><strong>Nome Fantasia:</strong> Altenburg Textil S.a.</p>
-                        <p><i class="bi bi-card-text me-2"></i><strong>CNPJ:</strong> 75.293.662/0001-04</p>
-                        <p><i class="bi bi-calendar me-2"></i><strong>Data Situação Cadastral:</strong> 03/11/2005</p>
-                        <p><i class="bi bi-geo-alt me-2"></i><strong>Matriz / Fábrica:</strong><br> Rodovia Br 470, 7235 - Badenfurt<br> Blumenau - SC | CEP: 89070-205</p>
-                        <div class="mt-3">
-                            <span class="badge bg-light text-dark p-2 me-2"><i class="bi bi-check-circle-fill text-success"></i> Situação ativa</span>
-                            <span class="badge bg-light text-dark p-2"><i class="bi bi-trophy-fill" style="color:#b87b5a;"></i> Certificações ABIT</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Produtos / Artefatos têxteis para uso doméstico (cards com ícones) -->
-    <section id="produtos" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <span class="text-uppercase small text-secondary fw-semibold">Nossos artefatos</span>
-                <h2 class="section-title" style="display: inline-block; margin-bottom: 0.5rem;">Têxteis que abraçam seu lar</h2>
-                <p class="mt-3 mx-auto" style="max-width: 700px;">Conforto, sofisticação e qualidade para cada ambiente da sua casa.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-house-door icone-card"></i>
-                        <h4>Jogos de cama</h4>
-                        <p>Lençóis 100% algodão, microfibra e percal. Kits completos com edredons e fronhas estampadas.</p>
-                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-half text-warning small"></i>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-droplet icone-card"></i>
-                        <h4>Toalhas de banho</h4>
-                        <p>Toalhas felpudas, macias e alta absorção. Conjuntos para banho, rosto e tapetes antiderrapantes.</p>
-                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-moon-stars icone-card"></i>
-                        <h4>Mantas & Cobertores</h4>
-                        <p>Manta sherpa, cobertores térmicos e peças versáteis para noites aconchegantes.</p>
-                        <i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i><i class="bi bi-star-fill text-warning small"></i>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-cup-straw icone-card"></i>
-                        <h4>Jogos americanos</h4>
-                        <p>Toalhas de mesa, jogos americanos em algodão e jacquard, perfeitos para cozinha e sala de jantar.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-symmetry-vertical icone-card"></i>
-                        <h4>Cortinas e painéis</h4>
-                        <p>Tecidos leves e blackout para personalizar ambientes com elegância e funcionalidade.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-sobre p-4 text-center">
-                        <i class="bi bi-egg-fried icone-card"></i>
-                        <h4>Acessórios cozinha</h4>
-                        <p>Panos de prato, luvas térmicas, aventais e itens decorativos têxteis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <i class="bi bi-chat-quote fs-4 me-1"></i> <span class="fst-italic">"Tecnologia têxtil com alma artesanal: tradição que aquece lares"</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Frases & Diferenciais (bloco de citação com ícones) -->
-    <section class="py-5 bg-bege-claro">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="row text-center g-4">
-                        <div class="col-md-4">
-                            <i class="bi bi-gem fs-1" style="color: #b87b5a;"></i>
-                            <h5 class="mt-3 fw-bold">Design exclusivo</h5>
-                            <p>Coleções assinadas por designers especializados em home & living.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="bi bi-tree fs-1" style="color: #b87b5a;"></i>
-                            <h5 class="mt-3 fw-bold">Algodão sustentável</h5>
-                            <p>Matérias-primas com rastreabilidade e respeito ao meio ambiente.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="bi bi-tools fs-1" style="color: #b87b5a;"></i>
-                            <h5 class="mt-3 fw-bold">Tecnologia têxtil</h5>
-                            <p>Processos modernos que garantem toque macio e maior durabilidade.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5 pt-3">
-                <div class="col-12 text-center">
-                    <div class="p-4 bg-white rounded-4 shadow-sm d-inline-block px-5">
-                        <i class="bi bi-quote fs-1 opacity-50"></i>
-                        <p class="fs-5 fw-light mb-0">"Qualidade e conforto que transformam cada cômodo em um verdadeiro refúgio."</p>
-                        <p class="mt-2 fw-semibold">— Altenburg Têxtil</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato + Mapa, telefone, endereço detalhado -->
-    <section id="contato" class="py-5">
-        <div class="container py-4">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <h2 class="section-title">Fale com a Altenburg</h2>
-                    <p class="mb-4">Entre em contato para parcerias, vendas ou informações sobre nossos artefatos têxteis. Atendimento de segunda a sexta, das 8h às 18h.</p>
-                    <div class="mb-4 d-flex align-items-start">
-                        <i class="bi bi-telephone-fill fs-3 me-3" style="color:#b87b5a;"></i>
-                        <div><strong>Telefone / WhatsApp</strong><br> (47) 3331-1500</div>
-                    </div>
-                    <div class="mb-4 d-flex align-items-start">
-                        <i class="bi bi-envelope-fill fs-3 me-3" style="color:#b87b5a;"></i>
-                        <div><strong>E-mail comercial</strong><br> contato@altenburgtextil.com.br (sugestão) / Fale conosco via formulário ou telefone</div>
-                    </div>
-                    <div class="mb-4 d-flex align-items-start">
-                        <i class="bi bi-pin-map-fill fs-3 me-3" style="color:#b87b5a;"></i>
-                        <div><strong>Visite nossa fábrica-showroom</strong><br> Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC<br> CEP: 89070-205</div>
-                    </div>
-                    <div class="mt-4">
-                        <a href="tel:4733311500" class="btn btn-altenburg rounded-pill me-2"><i class="bi bi-whatsapp"></i> Ligar agora</a>
-                        <a href="#" class="btn btn-outline-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#modalMapa"><i class="bi bi-map"></i> Ver no mapa</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card-sobre p-4">
-                        <h4 class="mb-3"><i class="bi bi-chat-dots"></i> Envie uma mensagem</h4>
-                        <form id="formContato" action="#" method="post">
-                            <div class="mb-3">
-                                <label class="form-label">Nome completo</label>
-                                <input type="text" class="form-control" placeholder="Seu nome" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">E-mail</label>
-                                <input type="email" class="form-control" placeholder="seuemail@exemplo.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Assunto</label>
-                                <input type="text" class="form-control" placeholder="Ex: Orçamento de jogos de cama">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Mensagem</label>
-                                <textarea class="form-control" rows="3" placeholder="Gostaria de saber mais sobre seus produtos..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-altenburg w-100">Enviar mensagem <i class="bi bi-send"></i></button>
-                            <p class="small text-muted mt-2">Responderemos em até 24h úteis.</p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé completo com informações legais, CNPJ, endereço -->
-    <footer class="pt-5 pb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 mb-4">
-                    <h5 class="fw-bold text-white">ALTENBURG TÊXTIL S.A.</h5>
-                    <p class="small">Fabricação de artefatos têxteis para uso doméstico com excelência e inovação. Orgulho catarinense desde 2005.</p>
-                    <div><i class="bi bi-c-circle"></i> 2025 Altenburg - Todos os direitos reservados.</div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h6 class="fw-semibold"><i class="bi bi-info-circle"></i> Institucional</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="#sobre" class="text-white-50 text-decoration-none">Sobre a empresa</a></li>
-                        <li><a href="#produtos" class="text-white-50 text-decoration-none">Linha de produtos</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Trabalhe conosco</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Política de qualidade</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h6 class="fw-semibold"><i class="bi bi-pin"></i> Localização</h6>
-                    <address class="small">
-                        Rodovia Br 470, 7235 - Badenfurt<br>
-                        Blumenau - SC, 89070-205<br>
-                        <i class="bi bi-telephone"></i> (47) 3331-1500<br>
-                        <i class="bi bi-envelope"></i> altenburg@contato.com.br
-                    </address>
-                    <div class="mt-2">
-                        <a href="#" class="text-white-50 me-2"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="#" class="text-white-50 me-2"><i class="bi bi-facebook fs-5"></i></a>
-                        <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="bg-secondary">
-            <div class="row small">
-                <div class="col-md-6">
-                    <i class="bi bi-card-list"></i> CNPJ: 75.293.662/0001-04 | Razão Social: Altenburg Textil S.a.
-                </div>
-                <div class="col-md-6 text-md-end">
-                    Data Situação Cadastral: 03/11/2005 - Ativa
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal Mapa (Simulação com iframe google maps adaptado para Blumenau - BR 470) -->
-    <div class="modal fade" id="modalMapa" tabindex="-1" aria-labelledby="modalMapaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalMapaLabel"><i class="bi bi-geo-alt-fill"></i> Altenburg - Localização</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0">
-                    <iframe src="https://maps.google.com/maps?q=Rodovia+BR-470,+7235+-+Badenfurt,+Blumenau+-+SC,+89070-205&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    <div class="p-3 bg-light">
-                        <p><strong>Endereço:</strong> Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC | CEP: 89070-205</p>
-                        <p class="mb-0"><i class="bi bi-clock"></i> Visitas mediante agendamento pelo telefone (47) 3331-1500.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- ====================== NAVBAR (Bootstrap) ====================== -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        <i class="bi bi-pencil-square me-2" style="color: #2c5f2d;"></i>
+        Dulcineia Papelaria
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="btn btn-outline-papel ms-lg-2 px-4 py-1" href="#localizacao"><i class="bi bi-geo-alt-fill me-1"></i> Localização</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Script Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script básico para alerta de formulário (não envia realmente, apenas feedback) -->
-    <script>
-        document.getElementById('formContato')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Em breve nossa equipe entrará em contato. Obrigado por confiar na Altenburg Têxtil.');
-            this.reset();
-        });
-    </script>
+  <!-- ====================== HERO / FRASE DE IMPACTO ====================== -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge-data mb-2 d-inline-block"><i class="bi bi-trophy-fill me-1"></i> Desde 2011</span>
+          <h1 class="display-5 fw-bold mt-2" style="color: #2c3e2f;">Papelaria com <span style="color: #b4652d;">alma criativa</span></h1>
+          <p class="lead mt-3 text-secondary">Sua inspiração em cada página, caneta e caderno. Atendimento acolhedor e produtos de qualidade para estudantes, artistas e profissionais.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4 hero-buttons">
+            <a href="#produtos" class="btn btn-papel px-4 py-2"><i class="bi bi-bag-check me-2"></i> Ver coleção</a>
+            <a href="#contato" class="btn btn-outline-papel px-4 py-2"><i class="bi bi-whatsapp me-2"></i> Fale conosco</a>
+          </div>
+          <div class="mt-4 d-flex align-items-center gap-3 flex-wrap">
+            <span><i class="bi bi-shield-check text-success"></i> Entrega rápida em SP</span>
+            <span><i class="bi bi-credit-card"></i> Parcele em até 3x sem juros</span>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://placehold.co/600x400/fef0df/2c5f2d?text=✏️+Arte+em+Papelaria&font=roboto" alt="Papelaria ilustração" class="img-fluid rounded-4 shadow-lg" style="max-height: 340px; object-fit: cover; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== ÍCONES + FRASES (Diferenciais) ====================== -->
+  <div class="container py-5">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="info-card">
+          <div class="card-icon"><i class="bi bi-palette-fill"></i></div>
+          <h5 class="fw-bold">Criatividade sem limites</h5>
+          <p class="text-muted">Cadernos artesanais, canetas coloridas e aquarelas para dar vida aos seus projetos.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <div class="card-icon"><i class="bi bi-people-fill"></i></div>
+          <h5 class="fw-bold">Atendimento humano</h5>
+          <p class="text-muted">Uma equipe pronta para ajudar na escolha do material escolar ou office supply ideal.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card">
+          <div class="card-icon"><i class="bi bi-truck"></i></div>
+          <h5 class="fw-bold">Entregamos na região</h5>
+          <p class="text-muted">Vila Santana e adjacências com frete acessível. Consulte condições.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== PRODUTOS EM DESTAQUE (com ícones) ====================== -->
+  <section id="produtos" class="py-5 bg-papelaria">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title display-6">✨ Destaques da Loja ✨</h2>
+        <hr class="divider-custom">
+        <p class="text-muted">Produtos selecionados para inspirar seu dia a dia</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <i class="bi bi-journal-bookmark-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Cadernos ecológicos</h5>
+              <p class="card-text text-secondary">Papel reciclado e capa dura, folhas pautadas ou pontilhadas.</p>
+              <span class="badge bg-success-subtle text-success p-2">a partir de R$ 24,90</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <i class="bi bi-pen-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Canetas profissionais</h5>
+              <p class="card-text text-secondary">Esferográfica, gel, nanquim e marcadores para lettering.</p>
+              <span class="badge bg-success-subtle text-success p-2">à partir R$ 3,90</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <i class="bi bi-scissors" style="font-size: 2.8rem; color: #2c5f2d;"></i>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Kits escolares</h5>
+              <p class="card-text text-secondary">Tesoura, cola, lápis de cor e régua em estojos completos.</p>
+              <span class="badge bg-success-subtle text-success p-2">Kit básico R$ 39,90</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+            <i class="bi bi-envelope-paper-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Papelaria criativa</h5>
+              <p class="card-text text-secondary">Adesivos, washi tapes, carimbos e envelopes decorativos.</p>
+              <span class="badge bg-success-subtle text-success p-2">novidades toda semana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-papel px-5 py-2"><i class="bi bi-cart3"></i> Conheça todo o acervo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== SOBRE A EMPRESA + INFORMAÇÕES LEGAIS ====================== -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <img src="https://placehold.co/600x500/fcf6ea/2c5f2d?text=📎+Papelaria+Dulcineia&font=roboto" alt="Loja física" class="img-fluid rounded-4 shadow-lg">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="mb-3">
+            <span class="badge-data"><i class="bi bi-building"></i> Mais de uma década de história</span>
+          </div>
+          <h2 class="display-6 fw-bold">Dulcineia Aparecida da Silva Ishizawa</h2>
+          <p class="lead text-muted mt-2">Comércio varejista de artigos de papelaria — tradição, confiança e atendimento acolhedor desde 2011.</p>
+          <div class="mt-4 bg-light p-4 rounded-4 border-start border-4 border-success">
+            <div class="row g-2">
+              <div class="col-12"><i class="bi bi-cnpj me-2 text-success"></i> <strong>CNPJ:</strong> 13.446.617/0001-87</div>
+              <div class="col-12"><i class="bi bi-calendar-check me-2 text-success"></i> <strong>Data Situação Cadastral:</strong> 18/03/2011</div>
+              <div class="col-12"><i class="bi bi-briefcase-fill me-2 text-success"></i> <strong>Razão Social:</strong> Dulcineia Aparecida da Silva Ishizawa</div>
+              <div class="col-12"><i class="bi bi-shop me-2 text-success"></i> <strong>Nome Fantasia:</strong> Dulcineia Aparecida da Silva Ishizawa</div>
+            </div>
+          </div>
+          <p class="mt-4">Nosso compromisso é oferecer produtos de qualidade, preços justos e um ambiente acolhedor para estudantes, artistas e empresas. Venha conhecer a melhor papelaria da Vila Santana!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== INFORMAÇÕES DE LOCALIZAÇÃO + MAPA SIMBÓLICO ====================== -->
+  <section id="localizacao" class="py-5 bg-papelaria">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title display-6"><i class="bi bi-pin-map-fill me-2"></i> Onde Estamos</h2>
+        <hr class="divider-custom">
+        <p class="text-muted">Visite nossa loja física ou entre em contato — estamos sempre prontos para atender você.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="info-card p-4 h-100">
+            <div class="map-icon-place mb-3">
+              <i class="bi bi-geo-alt-fill fs-1 text-success"></i>
+            </div>
+            <h4 class="fw-bold">Endereço</h4>
+            <p class="mb-1"><strong>Rua Mercedes Lopes, 363</strong></p>
+            <p class="mb-1">Bairro: Vila Santana</p>
+            <p class="mb-1">São Paulo - SP</p>
+            <p class="mb-3">CEP: 03614-000</p>
+            <hr>
+            <div class="mt-2">
+              <i class="bi bi-telephone-fill me-2 text-success"></i> <strong>(11) 3229-4414</strong><br>
+              <i class="bi bi-envelope-fill me-2 text-success mt-2"></i> contato@dulcineiapapelaria.com.br <span class="text-muted small">(exemplo)</span>
+            </div>
+            <div class="mt-4">
+              <span class="badge-data"><i class="bi bi-clock-history"></i> Horário: Seg-Sex 9h às 18h | Sáb 9h às 13h</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="info-card p-0 overflow-hidden h-100" style="border-radius: 28px;">
+            <iframe src="https://maps.google.com/maps?q=Rua+Mercedes+Lopes,+363,+Vila+Santana,+S%C3%A3o+Paulo+-+SP,+03614-000&output=embed&z=16" width="100%" height="320" style="border:0; border-radius: 28px 28px 0 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="p-3 bg-white text-center">
+              <i class="bi bi-bus-front"></i> Próximo ao metrô Vila Matilde e linhas de ônibus. Estacionamento nas proximidades.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CONTATO + WHATSAPP E FRASES ====================== -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-4">
+          <h2 class="section-title display-6">Fale com a gente</h2>
+          <hr class="divider-custom">
+          <p class="lead text-muted">Tem alguma dúvida sobre produtos, pedidos ou encomendas especiais? Estamos aqui para ajudar.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="info-card d-flex flex-column h-100">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-whatsapp fs-1 text-success me-3"></i>
+              <h3 class="h4 fw-bold mb-0">WhatsApp Comercial</h3>
+            </div>
+            <p class="fs-4 fw-semibold">(11) 3229-4414</p>
+            <p>Clique e converse com nosso time — respondemos rapidinho em horário comercial. Solicite catálogo digital e condições especiais.</p>
+            <a href="https://wa.me/551132294414?text=Olá!%20Gostaria%20de%20informações%20sobre%20produtos%20de%20papelaria." class="btn btn-papel mt-3 align-self-start" target="_blank"><i class="bi bi-whatsapp me-2"></i> Iniciar conversa</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-card h-100">
+            <i class="bi bi-envelope-paper fs-1 text-success mb-3 d-block"></i>
+            <h3 class="h4 fw-bold">E-mail & Atendimento</h3>
+            <p><i class="bi bi-envelope"></i> <strong>dulcineia@papelaria.com</strong> (e-mail institucional)</p>
+            <p><i class="bi bi-clock"></i> Retorno em até 24h úteis.</p>
+            <p><i class="bi bi-person-badge"></i> Para compras no varejo ou atacado, disponibilizamos nota fiscal e entrega segura.</p>
+            <div class="alert alert-light border mt-3" role="alert">
+              <i class="bi bi-star-fill text-warning"></i> "Atendimento nota 10! sempre encontro cadernos exclusivos" — cliente satisfeita.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== NEWSLETTER / FRASE FINAL ====================== -->
+  <div class="container py-4">
+    <div class="bg-white rounded-4 shadow-sm p-4 p-md-5 text-center border border-success border-opacity-25">
+      <i class="bi bi-megaphone-fill fs-1 text-success"></i>
+      <h3 class="mt-2">Fique por dentro das novidades</h3>
+      <p>Assine e receba ofertas especiais, lançamentos de planners e dicas de organização criativa.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Seu melhor e-mail" aria-label="Email">
+            <button class="btn btn-papel" type="button">Cadastrar</button>
+          </div>
+          <small class="text-muted">Não enviamos spam. Respeitamos sua privacidade.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================== FOOTER COMPLETO COM CNPJ, DIREITOS E ÍCONES ====================== -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-5">
+          <h5 class="fw-bold"><i class="bi bi-pencil-square me-2"></i> Dulcineia Papelaria</h5>
+          <p class="small text-white-50">Comércio varejista de artigos de papelaria desde 2011, oferecendo produtos de qualidade e atendimento personalizado na zona leste de São Paulo.</p>
+          <div class="d-flex">
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6>Links úteis</h6>
+          <ul class="list-unstyled footer-links small">
+            <li><a href="#inicio" class="text-white-50 text-decoration-none">Início</a></li>
+            <li><a href="#produtos" class="text-white-50 text-decoration-none">Produtos</a></li>
+            <li><a href="#sobre" class="text-white-50 text-decoration-none">Sobre a loja</a></li>
+            <li><a href="#contato" class="text-white-50 text-decoration-none">Contato / WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Dados legais</h6>
+          <p class="small text-white-50 mb-1">CNPJ: 13.446.617/0001-87</p>
+          <p class="small text-white-50 mb-1">Razão Social: Dulcineia Aparecida da Silva Ishizawa</p>
+          <p class="small text-white-50">Data Cadastro: 18/03/2011</p>
+          <p class="small text-white-50 mt-2"><i class="bi bi-geo-alt"></i> Rua Mercedes Lopes, 363 - Vila Santana, SP</p>
+        </div>
+      </div>
+      <hr class="mt-4 bg-secondary">
+      <div class="text-center text-white-50 small py-2">
+        © 2025 Dulcineia Aparecida da Silva Ishizawa - Papelaria. Todos os direitos reservados. <br> Desenvolvido para inspirar sua experiência.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (para navbar responsiva e possíveis interações) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
