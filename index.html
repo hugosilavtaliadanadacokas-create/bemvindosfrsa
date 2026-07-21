@@ -54,6 +54,7 @@
       display: flex;
       gap: 30px;
       font-weight: 500;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -417,6 +418,66 @@
       font-size: 1.2rem;
     }
 
+    /* ===== NOVAS SEÇÕES: SOBRE, POLÍTICA, TERMOS ===== */
+    .page-section {
+      background: white;
+      border-radius: 50px;
+      padding: 40px 35px;
+      margin: 40px 0;
+      border: 1px solid #eef3ff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+    }
+
+    .page-section h2 {
+      font-size: 2rem;
+      color: #0b2b5c;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .page-section h2 i {
+      color: #f1b722;
+    }
+
+    .page-section h3 {
+      color: #0b2b5c;
+      margin: 20px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .page-section p {
+      color: #2d3a5e;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    .page-section ul {
+      padding-left: 24px;
+      color: #2d3a5e;
+      margin-bottom: 16px;
+    }
+
+    .page-section ul li {
+      margin-bottom: 6px;
+    }
+
+    .page-section .cnpj-box {
+      background: #eef3ff;
+      padding: 16px 24px;
+      border-radius: 60px;
+      display: inline-block;
+      font-weight: 600;
+      color: #0b2b5c;
+      margin-top: 8px;
+    }
+
+    .page-section .cnpj-box i {
+      color: #f1b722;
+      margin-right: 10px;
+    }
+
     /* rodapé */
     footer {
       border-top: 1px solid #dce6f5;
@@ -433,16 +494,24 @@
     footer .footer-links {
       display: flex;
       gap: 26px;
+      flex-wrap: wrap;
     }
 
     footer .footer-links a {
       text-decoration: none;
       color: #1a1f36;
       font-weight: 500;
+      transition: color 0.2s;
     }
 
     footer .footer-links a:hover {
       color: #f1b722;
+    }
+
+    footer .footer-links .cnpj-footer {
+      font-weight: 400;
+      color: #4a5578;
+      font-size: 0.9rem;
     }
 
     .copy {
@@ -472,6 +541,9 @@
         flex: 1 1 160px;
         max-width: 200px;
       }
+      .page-section {
+        padding: 28px 20px;
+      }
     }
   </style>
 </head>
@@ -484,10 +556,11 @@
         <i class="fas fa-wifi"></i> Mania Telecom
       </div>
       <div class="nav-links">
-        <a href="#">Planos</a>
-        <a href="#">Benefícios</a>
-        <a href="#">Notícias</a>
-        <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+        <a href="#planos">Planos</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="#termos">Termos</a>
         <span class="btn-outline"><i class="fas fa-user"></i> Área do cliente</span>
       </div>
     </nav>
@@ -511,7 +584,7 @@
     </div>
 
     <!-- benefícios / perfil -->
-    <div class="section-title">
+    <div class="section-title" id="beneficios">
       <span class="sub">NOSSOS BENEFÍCIOS</span>
       <h2>TEM O SEU PERFIL</h2>
     </div>
@@ -539,7 +612,7 @@
     </div>
 
     <!-- planos -->
-    <div class="section-title">
+    <div class="section-title" id="planos">
       <span class="sub">CONHEÇA</span>
       <h2>NOSSOS PLANOS</h2>
     </div>
@@ -607,6 +680,78 @@
       </div>
     </div>
 
+    <!-- ========================================== -->
+    <!-- NOVAS SEÇÕES: SOBRE, POLÍTICA, TERMOS, CNPJ -->
+    <!-- ========================================== -->
+
+    <!-- SOBRE NÓS -->
+    <div class="page-section" id="sobre">
+      <h2><i class="fas fa-info-circle"></i> Sobre a Mania Telecom</h2>
+      <p>A <strong>Mania Telecom</strong> é um provedor de internet banda larga que atua nas cidades de <strong>Manaus</strong> (AM) e <strong>Santarém</strong> (PA). Nossa missão é levar conectividade de qualidade, com preços acessíveis e atendimento humanizado para que você possa navegar, trabalhar, estudar e se divertir sem interrupções.</p>
+      <p>Fundada em 2018, a Mania Telecom cresce junto com as comunidades que atendemos, investindo em infraestrutura de fibra ótica e equipe técnica qualificada para garantir a melhor experiência aos nossos clientes.</p>
+      <p><i class="fas fa-check-circle" style="color:#f1b722;"></i> <strong>Valores:</strong> Transparência, respeito, inovação e paixão pelo que fazemos.</p>
+      <div class="cnpj-box">
+        <i class="fas fa-building"></i> CNPJ: 12.345.678/0001-99
+      </div>
+    </div>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <div class="page-section" id="privacidade">
+      <h2><i class="fas fa-shield-alt"></i> Política de Privacidade</h2>
+      <p>A Mania Telecom respeita sua privacidade e está comprometida com a proteção dos seus dados pessoais. Esta política explica como coletamos, usamos e protegemos suas informações.</p>
+      
+      <h3>1. Dados coletados</h3>
+      <p>Coletamos informações como nome, CPF, endereço, e-mail, telefone e dados de navegação para contratação e gestão dos serviços.</p>
+      
+      <h3>2. Uso dos dados</h3>
+      <p>Utilizamos seus dados para:</p>
+      <ul>
+        <li>Prestar os serviços contratados (instalação, suporte, faturamento);</li>
+        <li>Enviar comunicações sobre atualizações, ofertas e novidades;</li>
+        <li>Melhorar nossos serviços e sua experiência como cliente.</li>
+      </ul>
+      
+      <h3>3. Compartilhamento</h3>
+      <p>Não vendemos ou alugamos seus dados. Compartilhamos apenas com parceiros operacionais (ex.: sistemas de pagamento) e quando exigido por lei.</p>
+      
+      <h3>4. Segurança</h3>
+      <p>Adotamos medidas técnicas e organizacionais para proteger seus dados contra acessos não autorizados, perda ou destruição.</p>
+      
+      <h3>5. Seus direitos</h3>
+      <p>Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo e-mail: <strong>privacidade@maniatelecom.com.br</strong></p>
+      <p><small>Última atualização: julho de 2026</small></p>
+    </div>
+
+    <!-- TERMOS DE USO -->
+    <div class="page-section" id="termos">
+      <h2><i class="fas fa-file-contract"></i> Termos de Uso</h2>
+      <p>Ao contratar os serviços da Mania Telecom, você concorda com os seguintes termos e condições:</p>
+      
+      <h3>1. Obrigações do cliente</h3>
+      <ul>
+        <li>Utilizar a internet de forma legal e ética, respeitando a legislação brasileira;</li>
+        <li>Não praticar atividades que prejudiquem a rede ou outros usuários (ex.: ataques, spam);</li>
+        <li>Manter seus dados cadastrais atualizados.</li>
+      </ul>
+      
+      <h3>2. Obrigações da Mania Telecom</h3>
+      <ul>
+        <li>Fornecer o serviço com a velocidade e estabilidade contratadas;</li>
+        <li>Garantir suporte técnico 24 horas por dia, 7 dias por semana;</li>
+        <li>Realizar a instalação gratuita e fornecer modem Wi-Fi 5G.</li>
+      </ul>
+      
+      <h3>3. Pagamento e cancelamento</h3>
+      <p>As faturas são emitidas mensalmente. O cancelamento pode ser solicitado a qualquer momento, sem multa (não há fidelidade).</p>
+      
+      <h3>4. Limitação de responsabilidade</h3>
+      <p>A Mania Telecom não se responsabiliza por danos decorrentes de mau uso da conexão ou de equipamentos do cliente.</p>
+      
+      <h3>5. Alterações</h3>
+      <p>Estes termos podem ser atualizados periodicamente. Notificaremos os clientes com antecedência.</p>
+      <p><small>Última revisão: julho de 2026</small></p>
+    </div>
+
     <!-- notícias -->
     <div class="section-title">
       <span class="sub">NOTÍCIAS</span>
@@ -638,16 +783,19 @@
       </div>
     </div>
 
-    <!-- rodapé -->
+    <!-- rodapé com CNPJ e links para as novas páginas -->
     <footer>
       <div class="copy">
         <i class="fas fa-wifi" style="color:#f1b722;"></i> Mania Telecom · Manaus e Santarém
       </div>
       <div class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="#termos">Termos</a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
+        <span class="cnpj-footer"><i class="fas fa-building"></i> CNPJ: 12.345.678/0001-99</span>
       </div>
       <div class="copy">
         © 2026 · Mania de Você
