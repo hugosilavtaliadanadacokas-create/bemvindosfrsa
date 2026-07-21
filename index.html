@@ -2,429 +2,658 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Dulcineia Papelaria | Sua loja de artigos de papelaria</title>
-  <!-- Bootstrap 5 CSS + Icons + Google Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!-- Google Fonts (para um toque mais profissional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mania Telecom · Internet banda larga</title>
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
-      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
     }
+
     body {
-      background-color: #fef9f0; /* tom suave que remete ao papel */
-      scroll-behavior: smooth;
+      background-color: #f8faff;
+      color: #1a1f36;
+      line-height: 1.5;
     }
-    /* navbar personalizada */
-    .navbar-brand {
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* cabeçalho / navegação */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #2c3e2f !important;
+      font-size: 1.8rem;
+      color: #0b2b5c;
     }
-    .bg-papelaria {
-      background: linear-gradient(135deg, #f8f3e8 0%, #fff6ea 100%);
+
+    .logo i {
+      color: #f1b722;
+      font-size: 2rem;
     }
-    .btn-papel {
-      background-color: #2c5f2d;
-      color: white;
-      border-radius: 40px;
-      padding: 10px 28px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border: none;
-    }
-    .btn-papel:hover {
-      background-color: #1e3b1f;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
-      color: white;
-    }
-    .btn-outline-papel {
-      border: 2px solid #2c5f2d;
-      color: #2c5f2d;
-      border-radius: 40px;
-      font-weight: 600;
-      transition: 0.2s;
-    }
-    .btn-outline-papel:hover {
-      background-color: #2c5f2d;
-      color: white;
-    }
-    .hero-section {
-      background: linear-gradient(120deg, #e9f5e6 0%, #fff2df 100%);
-      padding: 60px 0 50px 0;
-      border-bottom: 1px solid #ffe0b5;
-    }
-    .card-icon {
-      font-size: 2.6rem;
-      color: #2c5f2d;
-      margin-bottom: 18px;
-    }
-    .info-card {
-      background: white;
-      border-radius: 28px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border: none;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-      padding: 1.5rem;
-      height: 100%;
-    }
-    .info-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
-    }
-    .footer-links a {
-      text-decoration: none;
-      color: #f8f3e0;
-      transition: 0.2s;
-    }
-    .footer-links a:hover {
-      color: #ffdd99;
-      text-decoration: underline;
-    }
-    .social-icon {
-      font-size: 1.5rem;
-      margin-right: 1rem;
-      color: #f8f3e0;
-      transition: 0.2s;
-    }
-    .social-icon:hover {
-      color: #ffcf8a;
-      transform: scale(1.05);
-    }
-    .badge-data {
-      background-color: #f1e5cf;
-      color: #3b2c1f;
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
       font-weight: 500;
-      border-radius: 50px;
-      padding: 6px 15px;
     }
-    .map-icon-place {
-      background: #2c5f2d10;
-      padding: 12px;
-      border-radius: 60px;
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1a1f36;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #f1b722;
+    }
+
+    .btn-outline {
+      border: 2px solid #0b2b5c;
+      background: transparent;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #0b2b5c;
+      transition: 0.2s;
+      cursor: default;
+    }
+
+    .btn-outline i {
+      margin-right: 6px;
+    }
+
+    .btn-outline:hover {
+      background: #0b2b5c;
+      color: #fff;
+    }
+
+    /* hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0 30px;
+      gap: 30px;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero-text .tag {
+      background: #eef3ff;
       display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #0b2b5c;
+      letter-spacing: 0.3px;
+      margin-bottom: 16px;
     }
-    hr.divider-custom {
-      width: 70px;
-      height: 3px;
-      background: #2c5f2d;
-      opacity: 0.4;
-      margin: 0 auto 1rem auto;
-      border-radius: 4px;
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0b2b5c;
+      margin-bottom: 16px;
     }
+
+    .hero-text h1 span {
+      color: #f1b722;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #2d3a5e;
+      max-width: 500px;
+      margin-bottom: 24px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat-item i {
+      color: #f1b722;
+      font-size: 1.4rem;
+    }
+
+    .hero-image {
+      flex: 1 1 280px;
+      background: linear-gradient(145deg, #dce6f5, #ffffff);
+      border-radius: 60px 60px 60px 10px;
+      padding: 20px 20px 10px;
+      text-align: center;
+      box-shadow: 0 20px 30px -10px rgba(11, 43, 92, 0.15);
+    }
+
+    .hero-image i {
+      font-size: 8rem;
+      color: #0b2b5c;
+      opacity: 0.8;
+    }
+
+    .hero-image small {
+      display: block;
+      font-weight: 600;
+      color: #0b2b5c;
+      margin-top: 8px;
+    }
+
+    /* seção benefícios / perfil */
     .section-title {
-      font-weight: 700;
-      color: #2b3b26;
-      position: relative;
-      display: inline-block;
+      text-align: center;
+      margin: 60px 0 30px;
     }
-    @media (max-width: 768px) {
-      .hero-section {
-        text-align: center;
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: #0b2b5c;
+      font-weight: 700;
+    }
+
+    .section-title .sub {
+      color: #f1b722;
+      font-weight: 600;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin: 30px 0 20px;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 25px 15px;
+      border-radius: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      transition: 0.25s ease;
+      border: 1px solid rgba(11, 43, 92, 0.05);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(11, 43, 92, 0.08);
+      border-color: #f1b722;
+    }
+
+    .benefit-card i {
+      font-size: 2.6rem;
+      color: #0b2b5c;
+      background: #eef3ff;
+      padding: 16px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+    }
+
+    .benefit-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .benefit-card p {
+      color: #4a5578;
+      font-size: 0.95rem;
+    }
+
+    /* planos */
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin: 30px 0 40px;
+    }
+
+    .plan-card {
+      background: white;
+      border-radius: 40px;
+      padding: 28px 20px 22px;
+      flex: 1 1 200px;
+      max-width: 240px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      border: 1px solid #eef3ff;
+      transition: 0.2s;
+      text-align: center;
+    }
+
+    .plan-card:hover {
+      border-color: #f1b722;
+      box-shadow: 0 12px 28px rgba(11, 43, 92, 0.08);
+    }
+
+    .plan-card .plan-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0b2b5c;
+      letter-spacing: -0.5px;
+    }
+
+    .plan-card .plan-mega {
+      background: #f1b722;
+      color: #0b2b5c;
+      border-radius: 50px;
+      padding: 2px 16px;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin: 6px 0 10px;
+    }
+
+    .plan-card .price {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #0b2b5c;
+      margin: 12px 0 4px;
+    }
+
+    .plan-card .price small {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #4a5578;
+    }
+
+    .plan-card ul {
+      list-style: none;
+      text-align: left;
+      margin: 16px 0 12px;
+      padding: 0 8px;
+    }
+
+    .plan-card ul li {
+      padding: 4px 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .plan-card ul li i {
+      color: #f1b722;
+      width: 18px;
+      font-size: 0.9rem;
+    }
+
+    .plan-card .obs {
+      font-size: 0.7rem;
+      color: #6b7a9c;
+      margin-top: 10px;
+    }
+
+    .plan-card.highlight {
+      background: #0b2b5c;
+      color: white;
+      border-color: #0b2b5c;
+    }
+
+    .plan-card.highlight .plan-name,
+    .plan-card.highlight .price,
+    .plan-card.highlight .price small {
+      color: white;
+    }
+
+    .plan-card.highlight ul li {
+      color: #eef3ff;
+    }
+
+    .plan-card.highlight .plan-mega {
+      background: #f1b722;
+      color: #0b2b5c;
+    }
+
+    .badge-1gb {
+      background: #f1b722;
+      color: #0b2b5c;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    /* notícias */
+    .news-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 20px 0 40px;
+    }
+
+    .news-item {
+      background: white;
+      padding: 24px 28px;
+      border-radius: 40px;
+      flex: 1 1 260px;
+      border: 1px solid #eef3ff;
+    }
+
+    .news-item h4 {
+      font-size: 1.3rem;
+      color: #0b2b5c;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .news-item h4 i {
+      color: #f1b722;
+    }
+
+    .news-item p {
+      color: #2d3a5e;
+      margin-top: 10px;
+    }
+
+    /* FAQ */
+    .faq {
+      background: #eef3ff;
+      border-radius: 60px;
+      padding: 40px 30px;
+      margin: 40px 0 50px;
+    }
+
+    .faq h3 {
+      font-size: 1.8rem;
+      color: #0b2b5c;
+      margin-bottom: 20px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 16px 24px;
+      border-radius: 60px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .faq-item i {
+      color: #f1b722;
+      font-size: 1.2rem;
+    }
+
+    /* rodapé */
+    footer {
+      border-top: 1px solid #dce6f5;
+      padding: 30px 0 20px;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: #2d3a5e;
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 26px;
+    }
+
+    footer .footer-links a {
+      text-decoration: none;
+      color: #1a1f36;
+      font-weight: 500;
+    }
+
+    footer .footer-links a:hover {
+      color: #f1b722;
+    }
+
+    .copy {
+      font-size: 0.9rem;
+    }
+
+    /* responsivo */
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .hero-buttons {
-        justify-content: center;
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-image i {
+        font-size: 5rem;
+      }
+      .plans {
+        gap: 16px;
+      }
+      .plan-card {
+        flex: 1 1 160px;
+        max-width: 200px;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <!-- ====================== NAVBAR (Bootstrap) ====================== -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
-    <div class="container">
-      <a class="navbar-brand fw-bold fs-3" href="#">
-        <i class="bi bi-pencil-square me-2" style="color: #2c5f2d;"></i>
-        Dulcineia Papelaria
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#produtos">Produtos</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
-          <li class="nav-item"><a class="btn btn-outline-papel ms-lg-2 px-4 py-1" href="#localizacao"><i class="bi bi-geo-alt-fill me-1"></i> Localização</a></li>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fas fa-wifi"></i> Mania Telecom
+      </div>
+      <div class="nav-links">
+        <a href="#">Planos</a>
+        <a href="#">Benefícios</a>
+        <a href="#">Notícias</a>
+        <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+        <span class="btn-outline"><i class="fas fa-user"></i> Área do cliente</span>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <span class="tag"><i class="fas fa-bolt"></i> MANIA DE VOCÊ!</span>
+        <h1>Internet <span>banda larga</span> em Manaus & Santarém</h1>
+        <p>Navegue, trabalhe, estude e se divirta com velocidade e estabilidade. Planos acessíveis com instalação gratuita e modem Wi-Fi incluso.</p>
+        <div class="hero-stats">
+          <span class="stat-item"><i class="fas fa-check-circle"></i> 24h de suporte</span>
+          <span class="stat-item"><i class="fas fa-check-circle"></i> Wi-Fi 5G</span>
+          <span class="stat-item"><i class="fas fa-check-circle"></i> Sem fidelidade</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-satellite-dish"></i>
+        <small><i class="fas fa-map-pin"></i> Manaus · Santarém</small>
+      </div>
+    </div>
+
+    <!-- benefícios / perfil -->
+    <div class="section-title">
+      <span class="sub">NOSSOS BENEFÍCIOS</span>
+      <h2>TEM O SEU PERFIL</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <i class="fas fa-film"></i>
+        <h4>Ver Filmes</h4>
+        <p>Alta resolução e sem interrupções.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-headphones"></i>
+        <h4>Ouvir Músicas</h4>
+        <p>Para ouvir quando e do jeito que quiser.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-gamepad"></i>
+        <h4>Jogar Online</h4>
+        <p>Sem queda de conexão.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-laptop"></i>
+        <h4>Performance</h4>
+        <p>Navegue em um ou mais dispositivos.</p>
+      </div>
+    </div>
+
+    <!-- planos -->
+    <div class="section-title">
+      <span class="sub">CONHEÇA</span>
+      <h2>NOSSOS PLANOS</h2>
+    </div>
+
+    <div class="plans">
+      <!-- SUPER -->
+      <div class="plan-card">
+        <div class="plan-name">SUPER</div>
+        <div class="plan-mega">MEGA 0</div>
+        <div>100mb · 1000mb</div>
+        <div class="price">R$ 49,90 <small>/mês</small></div>
+        <ul>
+          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
+          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
+          <li><i class="fas fa-check"></i> Atendimento 24h</li>
+          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
         </ul>
+        <div class="obs">*Consultar Regulamento</div>
       </div>
-    </div>
-  </nav>
 
-  <!-- ====================== HERO / FRASE DE IMPACTO ====================== -->
-  <section id="inicio" class="hero-section">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <span class="badge-data mb-2 d-inline-block"><i class="bi bi-trophy-fill me-1"></i> Desde 2011</span>
-          <h1 class="display-5 fw-bold mt-2" style="color: #2c3e2f;">Papelaria com <span style="color: #b4652d;">alma criativa</span></h1>
-          <p class="lead mt-3 text-secondary">Sua inspiração em cada página, caneta e caderno. Atendimento acolhedor e produtos de qualidade para estudantes, artistas e profissionais.</p>
-          <div class="d-flex flex-wrap gap-3 mt-4 hero-buttons">
-            <a href="#produtos" class="btn btn-papel px-4 py-2"><i class="bi bi-bag-check me-2"></i> Ver coleção</a>
-            <a href="#contato" class="btn btn-outline-papel px-4 py-2"><i class="bi bi-whatsapp me-2"></i> Fale conosco</a>
-          </div>
-          <div class="mt-4 d-flex align-items-center gap-3 flex-wrap">
-            <span><i class="bi bi-shield-check text-success"></i> Entrega rápida em SP</span>
-            <span><i class="bi bi-credit-card"></i> Parcele em até 3x sem juros</span>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="https://placehold.co/600x400/fef0df/2c5f2d?text=✏️+Arte+em+Papelaria&font=roboto" alt="Papelaria ilustração" class="img-fluid rounded-4 shadow-lg" style="max-height: 340px; object-fit: cover; width: 100%;">
-        </div>
+      <!-- CONECTA -->
+      <div class="plan-card">
+        <div class="plan-name">CONECTA</div>
+        <div class="plan-mega">MEGA 0</div>
+        <div>100mb · 1000mb</div>
+        <div class="price">R$ 49,90 <small>/mês</small></div>
+        <ul>
+          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
+          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
+          <li><i class="fas fa-check"></i> Atendimento 24h</li>
+          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
+        </ul>
+        <div class="obs">*Consultar Regulamento</div>
       </div>
-    </div>
-  </section>
 
-  <!-- ====================== ÍCONES + FRASES (Diferenciais) ====================== -->
-  <div class="container py-5">
-    <div class="row text-center g-4">
-      <div class="col-md-4">
-        <div class="info-card">
-          <div class="card-icon"><i class="bi bi-palette-fill"></i></div>
-          <h5 class="fw-bold">Criatividade sem limites</h5>
-          <p class="text-muted">Cadernos artesanais, canetas coloridas e aquarelas para dar vida aos seus projetos.</p>
-        </div>
+      <!-- POWER -->
+      <div class="plan-card">
+        <div class="plan-name">POWER</div>
+        <div class="plan-mega">MEGA 0</div>
+        <div>100mb · 1000mb</div>
+        <div class="price">R$ 49,90 <small>/mês</small></div>
+        <ul>
+          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
+          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
+          <li><i class="fas fa-check"></i> Atendimento 24h</li>
+          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
+        </ul>
+        <div class="obs">*Consultar Regulamento</div>
       </div>
-      <div class="col-md-4">
-        <div class="info-card">
-          <div class="card-icon"><i class="bi bi-people-fill"></i></div>
-          <h5 class="fw-bold">Atendimento humano</h5>
-          <p class="text-muted">Uma equipe pronta para ajudar na escolha do material escolar ou office supply ideal.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="info-card">
-          <div class="card-icon"><i class="bi bi-truck"></i></div>
-          <h5 class="fw-bold">Entregamos na região</h5>
-          <p class="text-muted">Vila Santana e adjacências com frete acessível. Consulte condições.</p>
-        </div>
+
+      <!-- ULTRA 1GB (destacado) -->
+      <div class="plan-card highlight">
+        <div class="plan-name">ULTRA</div>
+        <span class="badge-1gb"><i class="fas fa-bolt"></i> 1GB</span>
+        <div>100mb · 1000mb</div>
+        <div class="price">R$ 49,90 <small>/mês</small></div>
+        <ul>
+          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
+          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
+          <li><i class="fas fa-check"></i> Atendimento 24h</li>
+          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
+          <li><i class="fas fa-check"></i> Deezer Premium</li>
+        </ul>
+        <div class="obs" style="color:#b0c4e8;">*Consultar Regulamento</div>
       </div>
     </div>
+
+    <!-- notícias -->
+    <div class="section-title">
+      <span class="sub">NOTÍCIAS</span>
+      <h2>Conheça nossas novidades!</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-item">
+        <h4><i class="fas fa-rocket"></i> Novos Planos</h4>
+        <p>Dê um upgrade no seu plano de conexão! Experimente velocidades ultra-rápidas, estabilidade incomparável e muito mais.</p>
+      </div>
+      <div class="news-item">
+        <h4><i class="fas fa-trophy"></i> Mania de você</h4>
+        <p>Atendimento personalizado e suporte técnico 24h. Estamos prontos para te ajudar a escolher o melhor plano.</p>
+      </div>
+      <div class="news-item">
+        <h4><i class="fas fa-wifi"></i> Wi-Fi 5G incluso</h4>
+        <p>Modem Wi-Fi de última geração em todos os planos. Navegue sem fio com máxima velocidade e estabilidade.</p>
+      </div>
+    </div>
+
+    <!-- FAQ / Dúvidas -->
+    <div class="faq">
+      <h3><i class="fas fa-question-circle" style="color:#f1b722; margin-right: 12px;"></i> Algumas Dúvidas?</h3>
+      <div class="faq-list">
+        <div class="faq-item"><i class="fas fa-circle-check"></i> Como contratar os planos? Entre em contato pelo site ou WhatsApp.</div>
+        <div class="faq-item"><i class="fas fa-circle-check"></i> Há fidelidade? Não, nossos planos são sem fidelidade.</div>
+        <div class="faq-item"><i class="fas fa-circle-check"></i> A instalação é gratuita? Sim, instalação e modem Wi-Fi 5G inclusos.</div>
+        <div class="faq-item"><i class="fas fa-circle-check"></i> Atendimento 24 horas por dia, 7 dias por semana.</div>
+      </div>
+    </div>
+
+    <!-- rodapé -->
+    <footer>
+      <div class="copy">
+        <i class="fas fa-wifi" style="color:#f1b722;"></i> Mania Telecom · Manaus e Santarém
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="copy">
+        © 2026 · Mania de Você
+      </div>
+    </footer>
+
   </div>
-
-  <!-- ====================== PRODUTOS EM DESTAQUE (com ícones) ====================== -->
-  <section id="produtos" class="py-5 bg-papelaria">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title display-6">✨ Destaques da Loja ✨</h2>
-        <hr class="divider-custom">
-        <p class="text-muted">Produtos selecionados para inspirar seu dia a dia</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <i class="bi bi-journal-bookmark-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Cadernos ecológicos</h5>
-              <p class="card-text text-secondary">Papel reciclado e capa dura, folhas pautadas ou pontilhadas.</p>
-              <span class="badge bg-success-subtle text-success p-2">a partir de R$ 24,90</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <i class="bi bi-pen-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Canetas profissionais</h5>
-              <p class="card-text text-secondary">Esferográfica, gel, nanquim e marcadores para lettering.</p>
-              <span class="badge bg-success-subtle text-success p-2">à partir R$ 3,90</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <i class="bi bi-scissors" style="font-size: 2.8rem; color: #2c5f2d;"></i>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Kits escolares</h5>
-              <p class="card-text text-secondary">Tesoura, cola, lápis de cor e régua em estojos completos.</p>
-              <span class="badge bg-success-subtle text-success p-2">Kit básico R$ 39,90</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-            <i class="bi bi-envelope-paper-fill" style="font-size: 2.8rem; color: #2c5f2d;"></i>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">Papelaria criativa</h5>
-              <p class="card-text text-secondary">Adesivos, washi tapes, carimbos e envelopes decorativos.</p>
-              <span class="badge bg-success-subtle text-success p-2">novidades toda semana</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="#" class="btn btn-papel px-5 py-2"><i class="bi bi-cart3"></i> Conheça todo o acervo</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== SOBRE A EMPRESA + INFORMAÇÕES LEGAIS ====================== -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <img src="https://placehold.co/600x500/fcf6ea/2c5f2d?text=📎+Papelaria+Dulcineia&font=roboto" alt="Loja física" class="img-fluid rounded-4 shadow-lg">
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="mb-3">
-            <span class="badge-data"><i class="bi bi-building"></i> Mais de uma década de história</span>
-          </div>
-          <h2 class="display-6 fw-bold">Dulcineia Aparecida da Silva Ishizawa</h2>
-          <p class="lead text-muted mt-2">Comércio varejista de artigos de papelaria — tradição, confiança e atendimento acolhedor desde 2011.</p>
-          <div class="mt-4 bg-light p-4 rounded-4 border-start border-4 border-success">
-            <div class="row g-2">
-              <div class="col-12"><i class="bi bi-cnpj me-2 text-success"></i> <strong>CNPJ:</strong> 13.446.617/0001-87</div>
-              <div class="col-12"><i class="bi bi-calendar-check me-2 text-success"></i> <strong>Data Situação Cadastral:</strong> 18/03/2011</div>
-              <div class="col-12"><i class="bi bi-briefcase-fill me-2 text-success"></i> <strong>Razão Social:</strong> Dulcineia Aparecida da Silva Ishizawa</div>
-              <div class="col-12"><i class="bi bi-shop me-2 text-success"></i> <strong>Nome Fantasia:</strong> Dulcineia Aparecida da Silva Ishizawa</div>
-            </div>
-          </div>
-          <p class="mt-4">Nosso compromisso é oferecer produtos de qualidade, preços justos e um ambiente acolhedor para estudantes, artistas e empresas. Venha conhecer a melhor papelaria da Vila Santana!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== INFORMAÇÕES DE LOCALIZAÇÃO + MAPA SIMBÓLICO ====================== -->
-  <section id="localizacao" class="py-5 bg-papelaria">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title display-6"><i class="bi bi-pin-map-fill me-2"></i> Onde Estamos</h2>
-        <hr class="divider-custom">
-        <p class="text-muted">Visite nossa loja física ou entre em contato — estamos sempre prontos para atender você.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-5">
-          <div class="info-card p-4 h-100">
-            <div class="map-icon-place mb-3">
-              <i class="bi bi-geo-alt-fill fs-1 text-success"></i>
-            </div>
-            <h4 class="fw-bold">Endereço</h4>
-            <p class="mb-1"><strong>Rua Mercedes Lopes, 363</strong></p>
-            <p class="mb-1">Bairro: Vila Santana</p>
-            <p class="mb-1">São Paulo - SP</p>
-            <p class="mb-3">CEP: 03614-000</p>
-            <hr>
-            <div class="mt-2">
-              <i class="bi bi-telephone-fill me-2 text-success"></i> <strong>(11) 3229-4414</strong><br>
-              <i class="bi bi-envelope-fill me-2 text-success mt-2"></i> contato@dulcineiapapelaria.com.br <span class="text-muted small">(exemplo)</span>
-            </div>
-            <div class="mt-4">
-              <span class="badge-data"><i class="bi bi-clock-history"></i> Horário: Seg-Sex 9h às 18h | Sáb 9h às 13h</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="info-card p-0 overflow-hidden h-100" style="border-radius: 28px;">
-            <iframe src="https://maps.google.com/maps?q=Rua+Mercedes+Lopes,+363,+Vila+Santana,+S%C3%A3o+Paulo+-+SP,+03614-000&output=embed&z=16" width="100%" height="320" style="border:0; border-radius: 28px 28px 0 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="p-3 bg-white text-center">
-              <i class="bi bi-bus-front"></i> Próximo ao metrô Vila Matilde e linhas de ônibus. Estacionamento nas proximidades.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== CONTATO + WHATSAPP E FRASES ====================== -->
-  <section id="contato" class="py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center mb-4">
-          <h2 class="section-title display-6">Fale com a gente</h2>
-          <hr class="divider-custom">
-          <p class="lead text-muted">Tem alguma dúvida sobre produtos, pedidos ou encomendas especiais? Estamos aqui para ajudar.</p>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="info-card d-flex flex-column h-100">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-whatsapp fs-1 text-success me-3"></i>
-              <h3 class="h4 fw-bold mb-0">WhatsApp Comercial</h3>
-            </div>
-            <p class="fs-4 fw-semibold">(11) 3229-4414</p>
-            <p>Clique e converse com nosso time — respondemos rapidinho em horário comercial. Solicite catálogo digital e condições especiais.</p>
-            <a href="https://wa.me/551132294414?text=Olá!%20Gostaria%20de%20informações%20sobre%20produtos%20de%20papelaria." class="btn btn-papel mt-3 align-self-start" target="_blank"><i class="bi bi-whatsapp me-2"></i> Iniciar conversa</a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info-card h-100">
-            <i class="bi bi-envelope-paper fs-1 text-success mb-3 d-block"></i>
-            <h3 class="h4 fw-bold">E-mail & Atendimento</h3>
-            <p><i class="bi bi-envelope"></i> <strong>dulcineia@papelaria.com</strong> (e-mail institucional)</p>
-            <p><i class="bi bi-clock"></i> Retorno em até 24h úteis.</p>
-            <p><i class="bi bi-person-badge"></i> Para compras no varejo ou atacado, disponibilizamos nota fiscal e entrega segura.</p>
-            <div class="alert alert-light border mt-3" role="alert">
-              <i class="bi bi-star-fill text-warning"></i> "Atendimento nota 10! sempre encontro cadernos exclusivos" — cliente satisfeita.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================== NEWSLETTER / FRASE FINAL ====================== -->
-  <div class="container py-4">
-    <div class="bg-white rounded-4 shadow-sm p-4 p-md-5 text-center border border-success border-opacity-25">
-      <i class="bi bi-megaphone-fill fs-1 text-success"></i>
-      <h3 class="mt-2">Fique por dentro das novidades</h3>
-      <p>Assine e receba ofertas especiais, lançamentos de planners e dicas de organização criativa.</p>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Seu melhor e-mail" aria-label="Email">
-            <button class="btn btn-papel" type="button">Cadastrar</button>
-          </div>
-          <small class="text-muted">Não enviamos spam. Respeitamos sua privacidade.</small>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====================== FOOTER COMPLETO COM CNPJ, DIREITOS E ÍCONES ====================== -->
-  <footer class="bg-dark text-white pt-5 pb-4 mt-4">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-5">
-          <h5 class="fw-bold"><i class="bi bi-pencil-square me-2"></i> Dulcineia Papelaria</h5>
-          <p class="small text-white-50">Comércio varejista de artigos de papelaria desde 2011, oferecendo produtos de qualidade e atendimento personalizado na zona leste de São Paulo.</p>
-          <div class="d-flex">
-            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <h6>Links úteis</h6>
-          <ul class="list-unstyled footer-links small">
-            <li><a href="#inicio" class="text-white-50 text-decoration-none">Início</a></li>
-            <li><a href="#produtos" class="text-white-50 text-decoration-none">Produtos</a></li>
-            <li><a href="#sobre" class="text-white-50 text-decoration-none">Sobre a loja</a></li>
-            <li><a href="#contato" class="text-white-50 text-decoration-none">Contato / WhatsApp</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h6>Dados legais</h6>
-          <p class="small text-white-50 mb-1">CNPJ: 13.446.617/0001-87</p>
-          <p class="small text-white-50 mb-1">Razão Social: Dulcineia Aparecida da Silva Ishizawa</p>
-          <p class="small text-white-50">Data Cadastro: 18/03/2011</p>
-          <p class="small text-white-50 mt-2"><i class="bi bi-geo-alt"></i> Rua Mercedes Lopes, 363 - Vila Santana, SP</p>
-        </div>
-      </div>
-      <hr class="mt-4 bg-secondary">
-      <div class="text-center text-white-50 small py-2">
-        © 2025 Dulcineia Aparecida da Silva Ishizawa - Papelaria. Todos os direitos reservados. <br> Desenvolvido para inspirar sua experiência.
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS Bundle (para navbar responsiva e possíveis interações) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
