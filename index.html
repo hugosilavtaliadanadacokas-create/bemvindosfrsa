@@ -418,7 +418,7 @@
       font-size: 1.2rem;
     }
 
-    /* ===== NOVAS SEÇÕES: SOBRE, POLÍTICA, TERMOS ===== */
+    /* ===== SEÇÕES: SOBRE, POLÍTICA, TERMOS ===== */
     .page-section {
       background: white;
       border-radius: 50px;
@@ -478,44 +478,109 @@
       margin-right: 10px;
     }
 
-    /* rodapé */
-    footer {
-      border-top: 1px solid #dce6f5;
-      padding: 30px 0 20px;
-      margin-top: 20px;
+    /* =============================================== */
+    /* NOVO RODAPÉ - ESTILO DA IMAGEM                 */
+    /* =============================================== */
+    .footer-new {
+      background: #0b2b5c;
+      color: #f0f4ff;
+      border-radius: 40px 40px 0 0;
+      padding: 50px 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px 30px;
+      margin-bottom: 35px;
+    }
+
+    .footer-col h4 {
+      color: #f1b722;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: #d0ddf5;
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #f1b722;
+    }
+
+    .footer-col .highlight-link {
+      color: #f1b722;
+      font-weight: 600;
+    }
+
+    .footer-col .highlight-link:hover {
+      color: #ffffff;
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      margin: 10px 0 25px;
+    }
+
+    .footer-bottom {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      color: #2d3a5e;
+      gap: 15px;
+      font-size: 0.85rem;
+      color: #b0c4e8;
     }
 
-    footer .footer-links {
+    .footer-bottom .company-info {
       display: flex;
-      gap: 26px;
       flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
     }
 
-    footer .footer-links a {
-      text-decoration: none;
-      color: #1a1f36;
-      font-weight: 500;
+    .footer-bottom .company-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-bottom .company-info i {
+      color: #f1b722;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom .social-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-bottom .social-links a {
+      color: #b0c4e8;
+      font-size: 1.2rem;
       transition: color 0.2s;
     }
 
-    footer .footer-links a:hover {
+    .footer-bottom .social-links a:hover {
       color: #f1b722;
-    }
-
-    footer .footer-links .cnpj-footer {
-      font-weight: 400;
-      color: #4a5578;
-      font-size: 0.9rem;
-    }
-
-    .copy {
-      font-size: 0.9rem;
     }
 
     /* responsivo */
@@ -543,6 +608,29 @@
       }
       .page-section {
         padding: 28px 20px;
+      }
+      .footer-new {
+        padding: 30px 20px 15px;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-bottom .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
       }
     }
   </style>
@@ -680,10 +768,6 @@
       </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- NOVAS SEÇÕES: SOBRE, POLÍTICA, TERMOS, CNPJ -->
-    <!-- ========================================== -->
-
     <!-- SOBRE NÓS -->
     <div class="page-section" id="sobre">
       <h2><i class="fas fa-info-circle"></i> Sobre a Mania Telecom</h2>
@@ -783,25 +867,90 @@
       </div>
     </div>
 
-    <!-- rodapé com CNPJ e links para as novas páginas -->
-    <footer>
-      <div class="copy">
-        <i class="fas fa-wifi" style="color:#f1b722;"></i> Mania Telecom · Manaus e Santarém
-      </div>
-      <div class="footer-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#privacidade">Privacidade</a>
-        <a href="#termos">Termos</a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <span class="cnpj-footer"><i class="fas fa-building"></i> CNPJ: 12.345.678/0001-99</span>
-      </div>
-      <div class="copy">
-        © 2026 · Mania de Você
-      </div>
-    </footer>
-
   </div>
+
+  <!-- ========================================================== -->
+  <!-- NOVO RODAPÉ - ESTILO EXATAMENTE IGUAL À IMAGEM              -->
+  <!-- ========================================================== -->
+  <footer class="footer-new">
+    <div class="container">
+
+      <!-- Grid com 4 colunas -->
+      <div class="footer-grid">
+
+        <!-- Institucional -->
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#sobre">Nossa marca</a></li>
+            <li><a href="#">Nossas lojas</a></li>
+            <li><a href="#">Multimarcas</a></li>
+            <li><a href="#">Seja um franqueado</a></li>
+            <li><a href="#">Programa de Afiliados</a></li>
+            <li><a href="#">Trabalhe com a gente</a></li>
+            <li><a href="#">Mapa do Site</a></li>
+            <li><a href="#privacidade" class="highlight-link">Política de Privacidade</a></li>
+            <li><a href="#">Black Friday</a></li>
+          </ul>
+        </div>
+
+        <!-- Atendimento -->
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#"><strong>Segunda à Sexta</strong><br>10h às 18h</a></li>
+            <li><a href="#"><i class="fas fa-phone" style="color:#f1b722; margin-right:6px;"></i> (92) 99999-9999</a></li>
+            <li><a href="#"><i class="fas fa-envelope" style="color:#f1b722; margin-right:6px;"></i> contato@maniatelecom.com.br</a></li>
+            <li><a href="#"><i class="fab fa-whatsapp" style="color:#f1b722; margin-right:6px;"></i> WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <!-- Informações Úteis -->
+        <div class="footer-col">
+          <h4>Informações Úteis</h4>
+          <ul>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#privacidade">Política de Privacidade</a></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Atraso de pedidos</a></li>
+          </ul>
+        </div>
+
+        <!-- Mais buscados -->
+        <div class="footer-col">
+          <h4>Mais buscados</h4>
+          <ul>
+            <li><a href="#planos">Planos de internet</a></li>
+            <li><a href="#planos">Internet 5G</a></li>
+            <li><a href="#planos">Fibra ótica</a></li>
+            <li><a href="#planos">Wi-Fi Mesh</a></li>
+            <li><a href="#planos">Suporte 24h</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- Linha inferior com CNPJ, endereço e redes sociais -->
+      <div class="footer-bottom">
+        <div class="company-info">
+          <span><i class="fas fa-building"></i> MANIA TELECOM LTDA</span>
+          <span><i class="fas fa-file-invoice"></i> CNPJ: 12.345.678/0001-99</span>
+          <span><i class="fas fa-id-card"></i> IE: 12.345.678</span>
+          <span><i class="fas fa-map-pin"></i> Rua das Telecomunicações, 132, Manaus, AM, 69000-000</span>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
