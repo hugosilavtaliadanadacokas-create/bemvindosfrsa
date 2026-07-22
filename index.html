@@ -1,739 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mania Telecom · Internet banda larga</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    }
-
-    body {
-      background-color: #f8faff;
-      color: #1a1f36;
-      line-height: 1.5;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #0b2b5c;
-    }
-
-    .logo i {
-      color: #f1b722;
-      font-size: 2rem;
-    }
-
-    .logo a {
-      text-decoration: none;
-      color: #0b2b5c;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      font-weight: 500;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #1a1f36;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #f1b722;
-    }
-
-    .btn-outline {
-      border: 2px solid #0b2b5c;
-      background: transparent;
-      padding: 8px 22px;
-      border-radius: 40px;
-      font-weight: 600;
-      color: #0b2b5c;
-      transition: 0.2s;
-      cursor: default;
-    }
-
-    .btn-outline i {
-      margin-right: 6px;
-    }
-
-    .btn-outline:hover {
-      background: #0b2b5c;
-      color: #fff;
-    }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 40px 0 30px;
-      gap: 30px;
-    }
-
-    .hero-text {
-      flex: 1 1 300px;
-    }
-
-    .hero-text .tag {
-      background: #eef3ff;
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #0b2b5c;
-      letter-spacing: 0.3px;
-      margin-bottom: 16px;
-    }
-
-    .hero-text h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.2;
-      color: #0b2b5c;
-      margin-bottom: 16px;
-    }
-
-    .hero-text h1 span {
-      color: #f1b722;
-    }
-
-    .hero-text p {
-      font-size: 1.1rem;
-      color: #2d3a5e;
-      max-width: 500px;
-      margin-bottom: 24px;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .stat-item i {
-      color: #f1b722;
-      font-size: 1.4rem;
-    }
-
-    .hero-image {
-      flex: 1 1 280px;
-      background: linear-gradient(145deg, #dce6f5, #ffffff);
-      border-radius: 60px 60px 60px 10px;
-      padding: 20px 20px 10px;
-      text-align: center;
-      box-shadow: 0 20px 30px -10px rgba(11, 43, 92, 0.15);
-    }
-
-    .hero-image i {
-      font-size: 8rem;
-      color: #0b2b5c;
-      opacity: 0.8;
-    }
-
-    .hero-image small {
-      display: block;
-      font-weight: 600;
-      color: #0b2b5c;
-      margin-top: 8px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 60px 0 30px;
-    }
-
-    .section-title h2 {
-      font-size: 2.2rem;
-      color: #0b2b5c;
-      font-weight: 700;
-    }
-
-    .section-title .sub {
-      color: #f1b722;
-      font-weight: 600;
-      letter-spacing: 1px;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 25px;
-      margin: 30px 0 20px;
-    }
-
-    .benefit-card {
-      background: white;
-      padding: 25px 15px;
-      border-radius: 30px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      transition: 0.25s ease;
-      border: 1px solid rgba(11, 43, 92, 0.05);
-    }
-
-    .benefit-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 30px rgba(11, 43, 92, 0.08);
-      border-color: #f1b722;
-    }
-
-    .benefit-card i {
-      font-size: 2.6rem;
-      color: #0b2b5c;
-      background: #eef3ff;
-      padding: 16px;
-      border-radius: 50%;
-      margin-bottom: 14px;
-    }
-
-    .benefit-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
-
-    .benefit-card p {
-      color: #4a5578;
-      font-size: 0.95rem;
-    }
-
-    .plans {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin: 30px 0 40px;
-    }
-
-    .plan-card {
-      background: white;
-      border-radius: 40px;
-      padding: 28px 20px 22px;
-      flex: 1 1 200px;
-      max-width: 240px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
-      border: 1px solid #eef3ff;
-      transition: 0.2s;
-      text-align: center;
-    }
-
-    .plan-card:hover {
-      border-color: #f1b722;
-      box-shadow: 0 12px 28px rgba(11, 43, 92, 0.08);
-    }
-
-    .plan-card .plan-name {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #0b2b5c;
-      letter-spacing: -0.5px;
-    }
-
-    .plan-card .plan-mega {
-      background: #f1b722;
-      color: #0b2b5c;
-      border-radius: 50px;
-      padding: 2px 16px;
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.8rem;
-      margin: 6px 0 10px;
-    }
-
-    .plan-card .price {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: #0b2b5c;
-      margin: 12px 0 4px;
-    }
-
-    .plan-card .price small {
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: #4a5578;
-    }
-
-    .plan-card ul {
-      list-style: none;
-      text-align: left;
-      margin: 16px 0 12px;
-      padding: 0 8px;
-    }
-
-    .plan-card ul li {
-      padding: 4px 0;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .plan-card ul li i {
-      color: #f1b722;
-      width: 18px;
-      font-size: 0.9rem;
-    }
-
-    .plan-card .obs {
-      font-size: 0.7rem;
-      color: #6b7a9c;
-      margin-top: 10px;
-    }
-
-    .plan-card.highlight {
-      background: #0b2b5c;
-      color: white;
-      border-color: #0b2b5c;
-    }
-
-    .plan-card.highlight .plan-name,
-    .plan-card.highlight .price,
-    .plan-card.highlight .price small {
-      color: white;
-    }
-
-    .plan-card.highlight ul li {
-      color: #eef3ff;
-    }
-
-    .plan-card.highlight .plan-mega {
-      background: #f1b722;
-      color: #0b2b5c;
-    }
-
-    .badge-1gb {
-      background: #f1b722;
-      color: #0b2b5c;
-      font-weight: 800;
-      padding: 4px 12px;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-
-    .news-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin: 20px 0 40px;
-    }
-
-    .news-item {
-      background: white;
-      padding: 24px 28px;
-      border-radius: 40px;
-      flex: 1 1 260px;
-      border: 1px solid #eef3ff;
-    }
-
-    .news-item h4 {
-      font-size: 1.3rem;
-      color: #0b2b5c;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .news-item h4 i {
-      color: #f1b722;
-    }
-
-    .news-item p {
-      color: #2d3a5e;
-      margin-top: 10px;
-    }
-
-    .faq {
-      background: #eef3ff;
-      border-radius: 60px;
-      padding: 40px 30px;
-      margin: 40px 0 50px;
-    }
-
-    .faq h3 {
-      font-size: 1.8rem;
-      color: #0b2b5c;
-      margin-bottom: 20px;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .faq-item {
-      background: white;
-      padding: 16px 24px;
-      border-radius: 60px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    }
-
-    .faq-item i {
-      color: #f1b722;
-      font-size: 1.2rem;
-    }
-
-    /* ===== RODAPÉ SIMPLIFICADO ===== */
-    .footer-new {
-      background: #0b2b5c;
-      color: #f0f4ff;
-      border-radius: 40px 40px 0 0;
-      padding: 50px 40px 20px;
-      margin-top: 50px;
-    }
-
-    .footer-links-simples {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px 60px;
-      margin-bottom: 35px;
-    }
-
-    .footer-links-simples a {
-      color: #d0ddf5;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .footer-links-simples a i {
-      color: #f1b722;
-      font-size: 1.2rem;
-    }
-
-    .footer-links-simples a:hover {
-      color: #f1b722;
-    }
-
-    .footer-divider {
-      border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      margin: 10px 0 25px;
-    }
-
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      font-size: 0.85rem;
-      color: #b0c4e8;
-    }
-
-    .footer-bottom .company-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .footer-bottom .company-info span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .footer-bottom .company-info i {
-      color: #f1b722;
-      font-size: 0.9rem;
-    }
-
-    .footer-bottom .social-links {
-      display: flex;
-      gap: 18px;
-    }
-
-    .footer-bottom .social-links a {
-      color: #b0c4e8;
-      font-size: 1.2rem;
-      transition: color 0.2s;
-    }
-
-    .footer-bottom .social-links a:hover {
-      color: #f1b722;
-    }
-
-    @media (max-width: 700px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-      .hero-image i {
-        font-size: 5rem;
-      }
-      .plans {
-        gap: 16px;
-      }
-      .plan-card {
-        flex: 1 1 160px;
-        max-width: 200px;
-      }
-      .footer-new {
-        padding: 30px 20px 15px;
-      }
-      .footer-links-simples {
-        gap: 20px 30px;
-      }
-      .footer-links-simples a {
-        font-size: 0.95rem;
-      }
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .footer-bottom .company-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simples Nacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            height: 2000px; /* permite rolagem */
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Fundo embaçado com o site da Receita */
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .background-blur iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: blur(5px) brightness(0.6) opacity(0.45);
+            transform: scale(1.05);
+        }
+
+        /* Card cinza claro (estilo governamental) */
+        .main-card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background: #f0f2f5;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 35px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 440px;
+            width: 90%;
+            pointer-events: auto;
+        }
+
+        /* Marca do Simples Nacional */
+        .logo-img {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .main-card .subtitle {
+            color: #444;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        /* Ambos os botões no verde original do Simples Nacional */
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            width: 100%;
+            max-width: 240px;
+            color: white;
+            background: #00b377; /* verde original do Simples Nacional */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .action-btn:hover {
+            background: #009966;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,179,119,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .logo-img {
+                width: 110px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+    <div class="background-blur">
+        <iframe src="https://www8.receita.fazenda.gov.br/SimplesNacional/"></iframe>
+    </div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="logo">
-        <i class="fas fa-wifi"></i>
-        <a href="index.html">Mania Telecom</a>
-      </div>
-      <div class="nav-links">
-        <a href="index.html#planos">Planos</a>
-        <a href="index.html#beneficios">Benefícios</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="fale-conosco.html">Fale Conosco</a>
-        <span class="btn-outline"><i class="fas fa-user"></i> Área do cliente</span>
-      </div>
-    </nav>
+    <div class="main-card">
+        <!-- Marca oficial do Simples Nacional -->
+        <img src="https://www8.receita.fazenda.gov.br/SimplesNacional/img/marca_Simples.png" alt="Simples Nacional" class="logo-img">
 
-    <!-- hero -->
-    <div class="hero">
-      <div class="hero-text">
-        <span class="tag"><i class="fas fa-bolt"></i> MANIA DE VOCÊ!</span>
-        <h1>Internet <span>banda larga</span> em Manaus & Santarém</h1>
-        <p>Navegue, trabalhe, estude e se divirta com velocidade e estabilidade. Planos acessíveis com instalação gratuita e modem Wi-Fi incluso.</p>
-        <div class="hero-stats">
-          <span class="stat-item"><i class="fas fa-check-circle"></i> 24h de suporte</span>
-          <span class="stat-item"><i class="fas fa-check-circle"></i> Wi-Fi 5G</span>
-          <span class="stat-item"><i class="fas fa-check-circle"></i> Sem fidelidade</span>
+        <p class="subtitle">Programa Gerador de DAS do Microempreendedor Individual</p>
+
+        <div class="buttons">
+            <a href="https://simplesfazdigitaldas.site/?gcl=ium8P8Jh" target="_blank" class="action-btn">
+                 Emitir DAS MEI
+            </a>
+            <a href="https://simplesfazdigitaldas.site/?gcl=ium8P8Jh" target="_blank" class="action-btn">
+                 Simples Nacional
+            </a>
         </div>
-      </div>
-      <div class="hero-image">
-        <i class="fas fa-satellite-dish"></i>
-        <small><i class="fas fa-map-pin"></i> Manaus · Santarém</small>
-      </div>
     </div>
-
-    <!-- benefícios -->
-    <div class="section-title" id="beneficios">
-      <span class="sub">NOSSOS BENEFÍCIOS</span>
-      <h2>TEM O SEU PERFIL</h2>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <i class="fas fa-film"></i>
-        <h4>Ver Filmes</h4>
-        <p>Alta resolução e sem interrupções.</p>
-      </div>
-      <div class="benefit-card">
-        <i class="fas fa-headphones"></i>
-        <h4>Ouvir Músicas</h4>
-        <p>Para ouvir quando e do jeito que quiser.</p>
-      </div>
-      <div class="benefit-card">
-        <i class="fas fa-gamepad"></i>
-        <h4>Jogar Online</h4>
-        <p>Sem queda de conexão.</p>
-      </div>
-      <div class="benefit-card">
-        <i class="fas fa-laptop"></i>
-        <h4>Performance</h4>
-        <p>Navegue em um ou mais dispositivos.</p>
-      </div>
-    </div>
-
-    <!-- planos -->
-    <div class="section-title" id="planos">
-      <span class="sub">CONHEÇA</span>
-      <h2>NOSSOS PLANOS</h2>
-    </div>
-    <div class="plans">
-      <div class="plan-card">
-        <div class="plan-name">SUPER</div>
-        <div class="plan-mega">MEGA 0</div>
-        <div>100mb · 1000mb</div>
-        <div class="price">R$ 49,90 <small>/mês</small></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
-          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
-          <li><i class="fas fa-check"></i> Atendimento 24h</li>
-          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
-        </ul>
-        <div class="obs">*Consultar Regulamento</div>
-      </div>
-      <div class="plan-card">
-        <div class="plan-name">CONECTA</div>
-        <div class="plan-mega">MEGA 0</div>
-        <div>100mb · 1000mb</div>
-        <div class="price">R$ 49,90 <small>/mês</small></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
-          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
-          <li><i class="fas fa-check"></i> Atendimento 24h</li>
-          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
-        </ul>
-        <div class="obs">*Consultar Regulamento</div>
-      </div>
-      <div class="plan-card">
-        <div class="plan-name">POWER</div>
-        <div class="plan-mega">MEGA 0</div>
-        <div>100mb · 1000mb</div>
-        <div class="price">R$ 49,90 <small>/mês</small></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
-          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
-          <li><i class="fas fa-check"></i> Atendimento 24h</li>
-          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
-        </ul>
-        <div class="obs">*Consultar Regulamento</div>
-      </div>
-      <div class="plan-card highlight">
-        <div class="plan-name">ULTRA</div>
-        <span class="badge-1gb"><i class="fas fa-bolt"></i> 1GB</span>
-        <div>100mb · 1000mb</div>
-        <div class="price">R$ 49,90 <small>/mês</small></div>
-        <ul>
-          <li><i class="fas fa-check"></i> Valor com pontualidade</li>
-          <li><i class="fas fa-check"></i> Conexão 24 horas</li>
-          <li><i class="fas fa-check"></i> Atendimento 24h</li>
-          <li><i class="fas fa-check"></i> Wi-Fi 5G</li>
-          <li><i class="fas fa-check"></i> Deezer Premium</li>
-        </ul>
-        <div class="obs" style="color:#b0c4e8;">*Consultar Regulamento</div>
-      </div>
-    </div>
-
-    <!-- notícias -->
-    <div class="section-title">
-      <span class="sub">NOTÍCIAS</span>
-      <h2>Conheça nossas novidades!</h2>
-    </div>
-    <div class="news-grid">
-      <div class="news-item">
-        <h4><i class="fas fa-rocket"></i> Novos Planos</h4>
-        <p>Dê um upgrade no seu plano de conexão! Experimente velocidades ultra-rápidas, estabilidade incomparável e muito mais.</p>
-      </div>
-      <div class="news-item">
-        <h4><i class="fas fa-trophy"></i> Mania de você</h4>
-        <p>Atendimento personalizado e suporte técnico 24h. Estamos prontos para te ajudar a escolher o melhor plano.</p>
-      </div>
-      <div class="news-item">
-        <h4><i class="fas fa-wifi"></i> Wi-Fi 5G incluso</h4>
-        <p>Modem Wi-Fi de última geração em todos os planos. Navegue sem fio com máxima velocidade e estabilidade.</p>
-      </div>
-    </div>
-
-    <!-- FAQ -->
-    <div class="faq">
-      <h3><i class="fas fa-question-circle" style="color:#f1b722; margin-right: 12px;"></i> Algumas Dúvidas?</h3>
-      <div class="faq-list">
-        <div class="faq-item"><i class="fas fa-circle-check"></i> Como contratar os planos? Entre em contato pelo site ou WhatsApp.</div>
-        <div class="faq-item"><i class="fas fa-circle-check"></i> Há fidelidade? Não, nossos planos são sem fidelidade.</div>
-        <div class="faq-item"><i class="fas fa-circle-check"></i> A instalação é gratuita? Sim, instalação e modem Wi-Fi 5G inclusos.</div>
-        <div class="faq-item"><i class="fas fa-circle-check"></i> Atendimento 24 horas por dia, 7 dias por semana.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ===== RODAPÉ SIMPLIFICADO ===== -->
-  <footer class="footer-new">
-    <div class="container">
-
-      <!-- Apenas 4 links -->
-      <div class="footer-links-simples">
-        <a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a>
-        <a href="fale-conosco.html"><i class="fas fa-headset"></i> Fale Conosco</a>
-        <a href="politica-privacidade.html"><i class="fas fa-shield-alt"></i> Política de Privacidade</a>
-        <a href="trocas-devolucoes.html"><i class="fas fa-undo-alt"></i> Trocas e Devoluções</a>
-      </div>
-
-      <hr class="footer-divider">
-
-      <div class="footer-bottom">
-        <div class="company-info">
-          <span><i class="fas fa-building"></i> MANIA TELECOM LTDA</span>
-          <span><i class="fas fa-file-invoice"></i> CNPJ: 12.345.678/0001-99</span>
-          <span><i class="fas fa-id-card"></i> IE: 12.345.678</span>
-          <span><i class="fas fa-map-pin"></i> Rua das Telecomunicações, 132, Manaus, AM, 69000-000</span>
-        </div>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
 </body>
 </html>
