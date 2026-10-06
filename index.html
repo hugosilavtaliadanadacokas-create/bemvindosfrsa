@@ -40,7 +40,7 @@
     }
     .topbar strong { color: var(--amarelo); }
 
-    /* ===== CABEÇALHO PRINCIPAL ===== */
+    /* ===== CABEÇALHO ===== */
     header {
         background: #fff;
         border-bottom: 1px solid var(--cinza-borda);
@@ -92,7 +92,6 @@
         font-weight: 500;
     }
 
-    /* Busca grande estilo e-commerce */
     .search-box {
         flex: 1;
         display: flex;
@@ -103,9 +102,7 @@
         max-width: 700px;
         transition: box-shadow 0.3s;
     }
-    .search-box:focus-within {
-        box-shadow: 0 0 0 4px rgba(46,158,79,0.15);
-    }
+    .search-box:focus-within { box-shadow: 0 0 0 4px rgba(46,158,79,0.15); }
     .search-box input {
         flex: 1;
         border: none;
@@ -126,7 +123,6 @@
     }
     .search-box button:hover { background: var(--verde-escuro); }
 
-    /* Ícones de ação */
     .header-icons {
         display: flex;
         gap: 20px;
@@ -164,9 +160,7 @@
     }
 
     /* ===== MENU CATEGORIAS ===== */
-    .menu-categorias {
-        background: var(--verde-medio);
-    }
+    .menu-categorias { background: var(--verde-medio); }
     .menu-inner {
         max-width: 1280px;
         margin: 0 auto;
@@ -262,7 +256,7 @@
     .btn-whats { background: #25d366; color: #fff; }
     .btn-amarelo { background: var(--amarelo); color: var(--verde-escuro); }
 
-    /* ===== SEÇÃO GENERICA ===== */
+    /* ===== SEÇÃO ===== */
     .secao {
         max-width: 1280px;
         margin: 0 auto;
@@ -300,13 +294,12 @@
     }
     .secao-header a:hover { text-decoration: underline; }
 
-    /* ===== VITRINE DE PRODUTOS ===== */
+    /* ===== VITRINE ===== */
     .produtos-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         gap: 22px;
     }
-
     .produto-card {
         background: #fff;
         border: 1px solid var(--cinza-borda);
@@ -322,13 +315,20 @@
     }
 
     .produto-imagem {
-        height: 160px;
+        height: 180px;
         background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 4rem;
         position: relative;
+        overflow: hidden;
+    }
+    .produto-imagem img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+    .produto-card:hover .produto-imagem img {
+        transform: scale(1.07);
     }
     .produto-tag {
         position: absolute;
@@ -341,6 +341,7 @@
         padding: 4px 10px;
         border-radius: 4px;
         text-transform: uppercase;
+        z-index: 2;
     }
     .produto-tag.novo { background: var(--verde-claro); }
 
@@ -392,7 +393,7 @@
     }
     .btn-add:hover { background: var(--verde-escuro); }
 
-    /* ===== CATEGORIAS EM DESTAQUE ===== */
+    /* ===== CATEGORIAS ===== */
     .categorias-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -413,22 +414,11 @@
         box-shadow: 0 10px 22px rgba(13,59,31,0.1);
         border-color: var(--verde-claro);
     }
-    .categoria-item .emoji {
-        font-size: 2.5rem;
-        display: block;
-        margin-bottom: 12px;
-    }
-    .categoria-item h4 {
-        font-size: 0.92rem;
-        font-weight: 700;
-        color: var(--verde-escuro);
-    }
-    .categoria-item span {
-        font-size: 0.75rem;
-        color: var(--texto-suave);
-    }
+    .categoria-item .emoji { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+    .categoria-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--verde-escuro); }
+    .categoria-item span { font-size: 0.75rem; color: var(--texto-suave); }
 
-    /* ===== DADOS DA EMPRESA ===== */
+    /* ===== DADOS EMPRESA ===== */
     .dados-empresa {
         background: #fff;
         padding: 55px 20px;
@@ -516,11 +506,7 @@
     }
     .contato-linha:last-child { border-bottom: none; }
     .contato-linha .ico { font-size: 1.2rem; flex-shrink: 0; }
-    .contato-linha a {
-        color: var(--verde-medio);
-        text-decoration: none;
-        font-weight: 600;
-    }
+    .contato-linha a { color: var(--verde-medio); text-decoration: none; font-weight: 600; }
     .contato-linha a:hover { text-decoration: underline; }
 
     /* ===== PÁGINAS INSTITUCIONAIS ===== */
@@ -544,15 +530,8 @@
         font-size: 1.2rem;
         margin: 26px 0 10px;
     }
-    .pagina-institucional p {
-        margin-bottom: 13px;
-        color: #33443a;
-        text-align: justify;
-    }
-    .pagina-institucional ul {
-        margin: 0 0 15px 25px;
-        color: #33443a;
-    }
+    .pagina-institucional p { margin-bottom: 13px; color: #33443a; text-align: justify; }
+    .pagina-institucional ul { margin: 0 0 15px 25px; color: #33443a; }
     .pagina-institucional ul li { margin-bottom: 7px; }
 
     /* ===== RODAPÉ ===== */
@@ -746,17 +725,18 @@
             </div>
         </section>
 
-        <!-- PRODUTOS EM DESTAQUE -->
+        <!-- PRODUTOS -->
         <section class="secao" id="produtos" style="padding-top:0;">
             <div class="secao-header">
                 <h3>Destaques da Semana</h3>
                 <a href="https://wa.me/5547989115054" target="_blank">Ver todos →</a>
             </div>
             <div class="produtos-grid">
+
                 <div class="produto-card">
                     <div class="produto-imagem">
                         <span class="produto-tag">Oferta</span>
-                        🍝
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80" alt="Marmita Executiva">
                     </div>
                     <div class="produto-info">
                         <h4>Marmita Executiva</h4>
@@ -765,10 +745,11 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
                 <div class="produto-card">
                     <div class="produto-imagem">
                         <span class="produto-tag novo">Novo</span>
-                        🥗
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="Prato Fit">
                     </div>
                     <div class="produto-info">
                         <h4>Prato Fit</h4>
@@ -777,9 +758,10 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        🍲
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500&q=80" alt="Sopa Caseira">
                     </div>
                     <div class="produto-info">
                         <h4>Sopa Caseira</h4>
@@ -788,10 +770,11 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
                 <div class="produto-card">
                     <div class="produto-imagem">
                         <span class="produto-tag">Oferta</span>
-                        🍰
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&q=80" alt="Sobremesa Caseira">
                     </div>
                     <div class="produto-info">
                         <h4>Sobremesa Caseira</h4>
@@ -800,9 +783,10 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        🥤
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&q=80" alt="Suco Natural">
                     </div>
                     <div class="produto-info">
                         <h4>Suco Natural 500ml</h4>
@@ -811,10 +795,11 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
                 <div class="produto-card">
                     <div class="produto-imagem">
                         <span class="produto-tag novo">Novo</span>
-                        🎁
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&q=80" alt="Combo Família">
                     </div>
                     <div class="produto-info">
                         <h4>Combo Família</h4>
@@ -823,6 +808,7 @@
                         <button class="btn-add">🛒 Adicionar</button>
                     </div>
                 </div>
+
             </div>
         </section>
 
