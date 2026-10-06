@@ -1,661 +1,997 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larissa Ferreira Denck | Fornecimento de Alimentos</title>
-    <style>
-        /* Reset e estilos globais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Larissa Ferreira Denck | Alimentos Preparados para Consumo Domiciliar</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
 
-        body {
-            background-color: #f8f9fa;
-            color: #212529;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+    :root {
+        --verde-escuro: #0d3b1f;
+        --verde-medio: #1b6b34;
+        --verde-claro: #2e9e4f;
+        --verde-destaque: #4caf50;
+        --amarelo: #ffc107;
+        --cinza-claro: #f4f6f4;
+        --cinza-borda: #e0e6e0;
+        --texto: #1f2d24;
+        --texto-suave: #5a6b60;
+    }
 
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(135deg, #1e3c2c 0%, #2d6a4f 100%);
-            color: #fff;
-            padding: 0 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    body {
+        background: #fff;
+        color: var(--texto);
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 12px 0;
-        }
+    /* ===== BARRA DE AVISO TOPO ===== */
+    .topbar {
+        background: var(--verde-escuro);
+        color: #fff;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 8px 15px;
+        letter-spacing: 0.3px;
+    }
 
-        .logo {
-            display: flex;
-            flex-direction: column;
-        }
+    .topbar strong { color: var(--amarelo); }
 
-        .logo h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
+    /* ===== CABEÇALHO ===== */
+    header {
+        background: #fff;
+        border-bottom: 1px solid var(--cinza-borda);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
 
-        .logo span {
-            font-size: 0.85rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
+    .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s, border-bottom 0.3s;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-        }
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
-        nav a:hover {
-            color: #d4edda;
-            border-bottom-color: #d4edda;
-        }
+    .logo-text h1 {
+        font-size: 1.15rem;
+        color: var(--verde-escuro);
+        font-weight: 800;
+        line-height: 1.2;
+    }
 
-        .horario-header {
-            font-size: 0.9rem;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 6px 14px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            backdrop-filter: blur(4px);
-        }
+    .logo-text span {
+        font-size: 0.75rem;
+        color: var(--texto-suave);
+        font-weight: 500;
+    }
 
-        .horario-header i {
-            font-style: normal;
-        }
+    /* Busca */
+    .search-box {
+        flex: 1;
+        max-width: 480px;
+        display: flex;
+        background: var(--cinza-claro);
+        border: 1px solid var(--cinza-borda);
+        border-radius: 30px;
+        overflow: hidden;
+    }
 
-        /* Conteúdo principal */
-        main {
-            flex: 1;
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-            width: 100%;
-        }
+    .search-box input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+        outline: none;
+        color: var(--texto);
+    }
 
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            padding: 35px 40px;
-            margin-bottom: 30px;
-            border: 1px solid #e9ecef;
-        }
+    .search-box button {
+        background: var(--verde-medio);
+        color: #fff;
+        border: none;
+        padding: 0 22px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: background 0.3s;
+    }
 
-        .card h2 {
-            color: #1e3c2c;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            border-left: 6px solid #2d6a4f;
-            padding-left: 18px;
-        }
+    .search-box button:hover { background: var(--verde-escuro); }
 
-        .card h3 {
-            color: #2d6a4f;
-            font-size: 1.3rem;
-            margin: 25px 0 12px 0;
-        }
+    /* Ações do header */
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
-            margin-top: 15px;
-        }
+    .action-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--texto);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
 
-        .info-item {
-            border-bottom: 1px dashed #dee2e6;
-            padding-bottom: 10px;
-        }
+    .action-item:hover { color: var(--verde-medio); }
 
-        .info-item strong {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #6c757d;
-            margin-bottom: 4px;
-        }
+    .action-icon {
+        font-size: 1.3rem;
+    }
 
-        .info-item span {
-            font-size: 1.05rem;
-            color: #212529;
-            font-weight: 500;
-            word-break: break-word;
-        }
+    /* ===== MENU DE CATEGORIAS ===== */
+    .menu-categorias {
+        background: var(--verde-medio);
+        color: #fff;
+    }
 
-        .badge {
-            display: inline-block;
-            background: #d4edda;
-            color: #155724;
-            padding: 4px 14px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-right: 8px;
-        }
+    .menu-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
 
-        .badge-ativa {
-            background: #28a745;
-            color: #fff;
-        }
+    .menu-inner a {
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 18px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        white-space: nowrap;
+        border-bottom: 3px solid transparent;
+        transition: background 0.3s, border-color 0.3s;
+    }
 
-        /* Seções de páginas (Políticas, Sobre, Termos) */
-        .page-section {
-            display: none;
-        }
+    .menu-inner a:hover,
+    .menu-inner a.ativo {
+        background: rgba(255,255,255,0.12);
+        border-bottom-color: var(--amarelo);
+    }
 
-        .page-section.active {
-            display: block;
-        }
+    /* ===== BANNER PRINCIPAL ===== */
+    .banner {
+        background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-medio) 60%, var(--verde-claro) 100%);
+        color: #fff;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+    }
 
-        .page-section p {
-            margin-bottom: 16px;
-            color: #343a40;
-        }
+    .banner::before {
+        content: "🍲";
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14rem;
+        opacity: 0.12;
+    }
 
-        .page-section ul {
-            margin-left: 25px;
-            margin-bottom: 16px;
-            color: #343a40;
-        }
+    .banner-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
 
-        .page-section ul li {
-            margin-bottom: 8px;
-        }
+    .banner h2 {
+        font-size: 2.4rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        max-width: 650px;
+    }
 
-        /* Rodapé */
-        footer {
-            background: #1e3c2c;
-            color: #e9ecef;
-            padding: 40px 20px 20px;
-            margin-top: 50px;
-        }
+    .banner p {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+        max-width: 600px;
+        opacity: 0.95;
+    }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 35px;
-        }
+    .banner-botoes {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
 
-        .footer-col h4 {
-            color: #a8e6cf;
-            font-size: 1.15rem;
-            margin-bottom: 18px;
-            border-bottom: 1px solid #2d6a4f;
-            padding-bottom: 8px;
-        }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        border: none;
+    }
 
-        .footer-col p {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
 
-        .footer-col a {
-            color: #e9ecef;
-            text-decoration: none;
-            transition: color 0.3s;
-            display: inline-block;
-            margin-bottom: 6px;
-        }
+    .btn-amarelo {
+        background: var(--amarelo);
+        color: var(--verde-escuro);
+    }
 
-        .footer-col a:hover {
-            color: #a8e6cf;
-        }
+    .btn-branco {
+        background: #fff;
+        color: var(--verde-medio);
+    }
 
-        .footer-horario {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 12px 16px;
-            border-radius: 10px;
-            margin-top: 10px;
-            font-size: 0.95rem;
-        }
+    .btn-whats {
+        background: #25d366;
+        color: #fff;
+    }
 
-        .footer-horario span {
-            font-weight: 700;
-            color: #a8e6cf;
-        }
+    /* ===== SEÇÃO PRODUTOS/SERVIÇOS ===== */
+    .secao {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 55px 20px;
+        width: 100%;
+    }
 
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 30px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid #2d6a4f;
-            text-align: center;
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
+    .secao-titulo {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 12px;
-                align-items: flex-start;
-            }
+    .secao-titulo h3 {
+        font-size: 1.9rem;
+        color: var(--verde-escuro);
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
 
-            nav ul {
-                gap: 15px;
-            }
+    .secao-titulo p {
+        color: var(--texto-suave);
+        font-size: 1rem;
+    }
 
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
+    .secao-titulo .linha {
+        width: 70px;
+        height: 4px;
+        background: var(--amarelo);
+        margin: 14px auto 0;
+        border-radius: 4px;
+    }
 
-            .card {
-                padding: 25px 20px;
-            }
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
 
-            .horario-header {
-                font-size: 0.8rem;
-                padding: 4px 10px;
-            }
-        }
+    .card-servico {
+        background: #fff;
+        border: 1px solid var(--cinza-borda);
+        border-radius: 14px;
+        padding: 30px 24px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
 
-        @media (max-width: 480px) {
-            nav ul {
-                flex-direction: column;
-                gap: 8px;
-            }
+    .card-servico:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(13,59,31,0.12);
+        border-color: var(--verde-claro);
+    }
 
-            .logo h1 {
-                font-size: 1.3rem;
-            }
+    .card-servico .icone {
+        font-size: 2.8rem;
+        margin-bottom: 16px;
+        display: block;
+    }
 
-            .card h2 {
-                font-size: 1.4rem;
-            }
-        }
+    .card-servico h4 {
+        font-size: 1.15rem;
+        color: var(--verde-escuro);
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
 
-        /* Estilo para links de e-mail/telefone */
-        .link-contato {
-            color: #2d6a4f;
-            text-decoration: none;
-            font-weight: 600;
-        }
+    .card-servico p {
+        font-size: 0.9rem;
+        color: var(--texto-suave);
+        line-height: 1.6;
+    }
 
-        .link-contato:hover {
-            text-decoration: underline;
-        }
+    /* ===== SEÇÃO DADOS EMPRESA ===== */
+    .dados-empresa {
+        background: var(--cinza-claro);
+        padding: 55px 20px;
+    }
 
-        /* Mapa placeholder */
-        .mapa-placeholder {
-            background: #e9ecef;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 15px;
-            color: #6c757d;
-            font-style: italic;
-            border: 2px dashed #ced4da;
-        }
+    .dados-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .mapa-placeholder a {
-            color: #2d6a4f;
-            font-weight: 700;
-            text-decoration: none;
-        }
+    .dados-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+    }
 
-        .mapa-placeholder a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .dado-item {
+        background: #fff;
+        border-left: 4px solid var(--verde-claro);
+        border-radius: 8px;
+        padding: 16px 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .dado-item strong {
+        display: block;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--texto-suave);
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    .dado-item span {
+        font-size: 1rem;
+        color: var(--texto);
+        font-weight: 600;
+        word-break: break-word;
+    }
+
+    .status-ativa {
+        display: inline-block;
+        background: var(--verde-destaque);
+        color: #fff;
+        padding: 3px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .cnae-box {
+        margin-top: 25px;
+        background: var(--verde-escuro);
+        color: #fff;
+        padding: 22px 26px;
+        border-radius: 12px;
+    }
+
+    .cnae-box strong {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--amarelo);
+        margin-bottom: 8px;
+    }
+
+    .cnae-box p {
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    /* ===== SEÇÃO CONTATO/LOCALIZAÇÃO ===== */
+    .contato-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .contato-card {
+        background: #fff;
+        border: 1px solid var(--cinza-borda);
+        border-radius: 14px;
+        padding: 28px;
+    }
+
+    .contato-card h4 {
+        color: var(--verde-escuro);
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contato-linha {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px dashed var(--cinza-borda);
+        font-size: 0.95rem;
+    }
+
+    .contato-linha:last-child { border-bottom: none; }
+
+    .contato-linha .ico {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .contato-linha a {
+        color: var(--verde-medio);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contato-linha a:hover { text-decoration: underline; }
+
+    /* ===== PÁGINAS INSTITUCIONAIS ===== */
+    .pagina-institucional {
+        display: none;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        width: 100%;
+    }
+
+    .pagina-institucional.ativa { display: block; }
+
+    .pagina-institucional h2 {
+        color: var(--verde-escuro);
+        font-size: 2rem;
+        margin-bottom: 25px;
+        border-left: 6px solid var(--amarelo);
+        padding-left: 18px;
+    }
+
+    .pagina-institucional h3 {
+        color: var(--verde-medio);
+        font-size: 1.25rem;
+        margin: 28px 0 12px;
+    }
+
+    .pagina-institucional p {
+        margin-bottom: 14px;
+        color: #33443a;
+        text-align: justify;
+    }
+
+    .pagina-institucional ul {
+        margin: 0 0 16px 25px;
+        color: #33443a;
+    }
+
+    .pagina-institucional ul li { margin-bottom: 8px; }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+        background: var(--verde-escuro);
+        color: #d7e3d9;
+        padding: 50px 20px 20px;
+        margin-top: auto;
+    }
+
+    .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 35px;
+    }
+
+    .footer-col h4 {
+        color: var(--amarelo);
+        font-size: 1rem;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .footer-col p, .footer-col a {
+        font-size: 0.9rem;
+        color: #d7e3d9;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+
+    .footer-col a:hover { color: var(--amarelo); }
+
+    .footer-horario {
+        background: rgba(255,255,255,0.07);
+        border-left: 3px solid var(--amarelo);
+        padding: 12px 15px;
+        border-radius: 6px;
+        margin-top: 8px;
+    }
+
+    .footer-horario .hora {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+        max-width: 1200px;
+        margin: 35px auto 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        text-align: center;
+        font-size: 0.8rem;
+        color: #a8bfae;
+        line-height: 1.7;
+    }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 900px) {
+        .search-box { order: 3; max-width: 100%; width: 100%; }
+        .header-inner { padding: 12px 16px; }
+        .banner h2 { font-size: 1.8rem; }
+        .contato-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+        .header-actions { gap: 12px; }
+        .action-item span.txt { display: none; }
+        .banner { padding: 40px 18px; }
+        .banner h2 { font-size: 1.5rem; }
+        .banner::before { font-size: 8rem; }
+        .secao { padding: 40px 16px; }
+        .secao-titulo h3 { font-size: 1.5rem; }
+        .pagina-institucional h2 { font-size: 1.5rem; }
+    }
+</style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
+<!-- BARRA TOPO -->
+<div class="topbar">
+    🚚 Entregamos em <strong>São Bento do Sul e região</strong> — Alimentos preparados com qualidade para o seu lar!
+</div>
+
+<!-- CABEÇALHO -->
+<header>
+    <div class="header-inner">
+        <div class="logo-area" onclick="mostrarSecao('inicio')">
+            <div class="logo-icon">🍲</div>
+            <div class="logo-text">
                 <h1>Larissa Ferreira Denck</h1>
-                <span>Fornecimento de Alimentos Preparados</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" onclick="mostrarSecao('inicio')">Início</a></li>
-                    <li><a href="#" onclick="mostrarSecao('sobre')">Sobre</a></li>
-                    <li><a href="#" onclick="mostrarSecao('politicas')">Políticas de Privacidade</a></li>
-                    <li><a href="#" onclick="mostrarSecao('termos')">Termos de Uso</a></li>
-                </ul>
-            </nav>
-            <div class="horario-header">
-                <i>🕒</i> <span id="horarioHeader">Carregando...</span>
+                <span>Alimentos Preparados para Consumo Domiciliar</span>
             </div>
         </div>
-    </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
+        <div class="search-box">
+            <input type="text" placeholder="O que você procura hoje?">
+            <button type="button">Buscar</button>
+        </div>
 
-        <!-- Seção Início (Dados da Empresa) -->
-        <section id="inicio" class="page-section active">
-            <div class="card">
-                <h2>Dados da Empresa</h2>
-                <div class="info-grid">
-                    <div class="info-item">
+        <div class="header-actions">
+            <a href="https://wa.me/5547989115054" target="_blank" class="action-item">
+                <span class="action-icon">💬</span>
+                <span class="txt">WhatsApp</span>
+            </a>
+            <a href="tel:+5547989115054" class="action-item">
+                <span class="action-icon">📞</span>
+                <span class="txt">Ligar</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MENU CATEGORIAS -->
+    <nav class="menu-categorias">
+        <div class="menu-inner">
+            <a href="#" class="ativo" onclick="mostrarSecao('inicio'); return false;">Início</a>
+            <a href="#" onclick="mostrarSecao('sobre'); return false;">Sobre</a>
+            <a href="#" onclick="mostrarSecao('politicas'); return false;">Políticas de Privacidade</a>
+            <a href="#" onclick="mostrarSecao('termos'); return false;">Termos de Uso</a>
+            <a href="#dados">Dados da Empresa</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </nav>
+</header>
+
+<!-- CONTEÚDO -->
+<main>
+
+    <!-- PÁGINA INÍCIO -->
+    <div id="inicio" class="pagina-institucional ativa" style="padding:0; max-width:100%;">
+
+        <!-- BANNER -->
+        <section class="banner">
+            <div class="banner-inner">
+                <h2>Alimentos preparados com carinho, direto na sua casa</h2>
+                <p>Fornecimento de alimentos preparados preponderantemente para consumo domiciliar em São Bento do Sul - SC. Qualidade, sabor e praticidade para o seu dia a dia.</p>
+                <div class="banner-botoes">
+                    <a href="https://wa.me/5547989115054" target="_blank" class="btn btn-whats">💬 Pedir pelo WhatsApp</a>
+                    <a href="tel:+5547989115054" class="btn btn-amarelo">📞 (47) 98911-5054</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="secao">
+            <div class="secao-titulo">
+                <h3>Nossos Serviços</h3>
+                <p>Alimentos preparados para o conforto do seu lar</p>
+                <div class="linha"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="card-servico">
+                    <span class="icone">🍱</span>
+                    <h4>Refeições Prontas</h4>
+                    <p>Alimentos preparados com ingredientes selecionados, prontos para o consumo em casa.</p>
+                </div>
+                <div class="card-servico">
+                    <span class="icone">🚚</span>
+                    <h4>Entrega Domiciliar</h4>
+                    <p>Levamos até você, com agilidade e cuidado, em São Bento do Sul e região.</p>
+                </div>
+                <div class="card-servico">
+                    <span class="icone">🥗</span>
+                    <h4>Variedade e Sabor</h4>
+                    <p>Opções variadas para atender o gosto de toda a família, todos os dias.</p>
+                </div>
+                <div class="card-servico">
+                    <span class="icone">✅</span>
+                    <h4>Qualidade e Higiene</h4>
+                    <p>Preparo cuidadoso seguindo rigorosos padrões de higiene e segurança alimentar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DADOS DA EMPRESA -->
+        <section class="dados-empresa" id="dados">
+            <div class="dados-inner">
+                <div class="secao-titulo">
+                    <h3>Dados da Empresa</h3>
+                    <p>Informações cadastrais oficiais</p>
+                    <div class="linha"></div>
+                </div>
+
+                <div class="dados-grid">
+                    <div class="dado-item">
                         <strong>CNPJ</strong>
                         <span>61.032.057/0001-67</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Razão Social</strong>
                         <span>61.032.057 Larissa Ferreira Denck</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Data da Abertura</strong>
-                        <span>27/05/2025 (1 ano, 4 meses e 10 dias)</span>
+                        <span>27/05/2025 — 1 ano, 4 meses e 10 dias</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Porte</strong>
                         <span>Micro Empresa</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Natureza Jurídica</strong>
                         <span>Empresário (Individual)</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Opção pelo MEI</strong>
                         <span>Não</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Opção pelo Simples</strong>
-                        <span>Sim</span>
+                        <span>Sim — desde 27/05/2025</span>
                     </div>
-                    <div class="info-item">
-                        <strong>Data opção Simples</strong>
-                        <span>27/05/2025</span>
-                    </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Capital Social</strong>
                         <span>R$ 10.000,00</span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Tipo</strong>
                         <span>Matriz</span>
                     </div>
-                    <div class="info-item">
-                        <strong>Situação</strong>
-                        <span><span class="badge badge-ativa">Ativa</span></span>
+                    <div class="dado-item">
+                        <strong>Situação Cadastral</strong>
+                        <span><span class="status-ativa">Ativa</span></span>
                     </div>
-                    <div class="info-item">
+                    <div class="dado-item">
                         <strong>Data Situação Cadastral</strong>
                         <span>27/05/2025</span>
                     </div>
                 </div>
 
-                <h3>Atividades - CNAES</h3>
-                <div class="info-item">
-                    <strong>Principal</strong>
-                    <span>56.20-1-04 - Fornecimento de alimentos preparados preponderantemente para consumo domiciliar</span>
-                </div>
-
-                <h3>Contatos</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <strong>E-mail</strong>
-                        <span><a href="mailto:larissaferreiragb@gmail.com" class="link-contato">larissaferreiragb@gmail.com</a></span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Telefone</strong>
-                        <span>
-                            <a href="tel:+5547989115054" class="link-contato">(47) 98911-5054</a> 
-                            <span style="font-size:0.85rem; color:#6c757d;">(Ligar / WhatsApp)</span>
-                        </span>
-                    </div>
-                </div>
-
-                <h3>Localização</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <strong>Logradouro</strong>
-                        <span>Rua Wilfried Antonio Weihermann, 240</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Bairro</strong>
-                        <span>Lencol</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>CEP</strong>
-                        <span>89289-590</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Município</strong>
-                        <span>São Bento do Sul</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Estado</strong>
-                        <span>Santa Catarina</span>
-                    </div>
-                </div>
-
-                <div style="margin-top:20px;">
-                    <strong style="display:block; margin-bottom:8px; color:#6c757d; font-size:0.85rem; text-transform:uppercase;">Para Correspondência:</strong>
-                    <p>61.032.057 Larissa Ferreira Denck<br>
-                    Rua Wilfried Antonio Weihermann 240<br>
-                    Lencol<br>
-                    São Bento do Sul - SC<br>
-                    89289-590</p>
-                </div>
-
-                <div class="mapa-placeholder">
-                    📍 <a href="https://www.google.com/maps/search/?api=1&query=Rua+Wilfried+Antonio+Weihermann+240+Lencol+São+Bento+do+Sul+SC+89289-590" target="_blank">Procurar no Google Maps</a>
+                <div class="cnae-box">
+                    <strong>Atividade Principal — CNAE</strong>
+                    <p>56.20-1-04 — Fornecimento de alimentos preparados preponderantemente para consumo domiciliar</p>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Sobre -->
-        <section id="sobre" class="page-section">
-            <div class="card">
-                <h2>Sobre</h2>
-                <p>A empresa <strong>61.032.057 Larissa Ferreira Denck</strong> de CNPJ <strong>61.032.057/0001-67</strong>, foi fundada em <strong>27/05/2025</strong> na cidade de <strong>São Bento do Sul</strong> no estado de <strong>Santa Catarina</strong>.</p>
-                <p>Sua atividade principal, conforme a Receita Federal, é <strong>56.20-1-04 - Fornecimento de alimentos preparados preponderantemente para consumo domiciliar</strong>.</p>
-                <p>Sua situação cadastral até o momento é <strong>Ativa</strong>.</p>
-                <p>Localizada no bairro Lencol, a empresa atende a região de São Bento do Sul e arredores, oferecendo alimentos preparados com qualidade e dedicação.</p>
-                <h3>Missão</h3>
-                <p>Proporcionar refeições saborosas e de qualidade, com atendimento ágil e confiável, atendendo às necessidades domiciliares de nossos clientes.</p>
-                <h3>Visão</h3>
-                <p>Ser referência em fornecimento de alimentos preparados na região, reconhecida pelo sabor e pela confiança.</p>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Qualidade e higiene</li>
-                    <li>Compromisso com o cliente</li>
-                    <li>Pontualidade nas entregas</li>
-                    <li>Respeito e transparência</li>
-                </ul>
+        <!-- CONTATO E LOCALIZAÇÃO -->
+        <section class="secao" id="contato">
+            <div class="secao-titulo">
+                <h3>Contato e Localização</h3>
+                <p>Estamos à disposição para atender você</p>
+                <div class="linha"></div>
             </div>
-        </section>
 
-        <!-- Seção Políticas de Privacidade -->
-        <section id="politicas" class="page-section">
-            <div class="card">
-                <h2>Políticas de Privacidade</h2>
-                <p>A <strong>61.032.057 Larissa Ferreira Denck</strong>, CNPJ <strong>61.032.057/0001-67</strong>, valoriza a privacidade e a segurança dos dados de seus clientes. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais fornecidas por você.</p>
-                
-                <h3>1. Coleta de Informações</h3>
-                <p>Coletamos informações pessoais como nome, endereço, telefone e e-mail quando você realiza um pedido, entra em contato conosco ou se cadastra em nossos canais de atendimento.</p>
-
-                <h3>2. Uso das Informações</h3>
-                <p>As informações coletadas são utilizadas para:</p>
-                <ul>
-                    <li>Processar e entregar pedidos;</li>
-                    <li>Entrar em contato sobre pedidos ou solicitações;</li>
-                    <li>Melhorar nossos serviços e atendimento;</li>
-                    <li>Enviar comunicações promocionais (com consentimento).</li>
-                </ul>
-
-                <h3>3. Compartilhamento de Dados</h3>
-                <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para processar pagamentos ou realizar entregas, ou quando exigido por lei.</p>
-
-                <h3>4. Segurança</h3>
-                <p>Adotamos medidas de segurança para proteger seus dados contra acesso não autorizado, alteração, divulgação ou destruição.</p>
-
-                <h3>5. Seus Direitos</h3>
-                <p>Você tem o direito de solicitar acesso, correção ou exclusão de seus dados pessoais. Para isso, entre em contato pelo e-mail: <a href="mailto:larissaferreiragb@gmail.com" class="link-contato">larissaferreiragb@gmail.com</a>.</p>
-
-                <h3>6. Alterações nesta Política</h3>
-                <p>Esta política pode ser atualizada periodicamente. Recomendamos que você a revise regularmente.</p>
-
-                <p><em>Última atualização: Maio de 2025.</em></p>
-            </div>
-        </section>
-
-        <!-- Seção Termos de Uso -->
-        <section id="termos" class="page-section">
-            <div class="card">
-                <h2>Termos de Uso</h2>
-                <p>Bem-vindo ao site da <strong>61.032.057 Larissa Ferreira Denck</strong>. Ao acessar e utilizar este site, você concorda com os seguintes Termos de Uso. Leia-os atentamente.</p>
-
-                <h3>1. Aceitação dos Termos</h3>
-                <p>Ao utilizar este site, você declara ter lido, compreendido e aceito todos os termos e condições aqui descritos.</p>
-
-                <h3>2. Uso do Site</h3>
-                <p>O conteúdo deste site é para uso informativo e para realização de pedidos. Você concorda em não utilizar o site para fins ilícitos ou não autorizados.</p>
-
-                <h3>3. Pedidos e Pagamentos</h3>
-                <p>Os pedidos estão sujeitos à disponibilidade e confirmação. Os preços e condições podem ser alterados sem aviso prévio. O pagamento deve ser realizado conforme as opções oferecidas no momento do pedido.</p>
-
-                <h3>4. Entregas</h3>
-                <p>As entregas são realizadas na região de São Bento do Sul e arredores, conforme prazos e taxas informados no momento do pedido.</p>
-
-                <h3>5. Propriedade Intelectual</h3>
-                <p>Todo o conteúdo deste site, incluindo textos, imagens e logotipos, é de propriedade da empresa e não pode ser reproduzido sem autorização.</p>
-
-                <h3>6. Limitação de Responsabilidade</h3>
-                <p>A empresa não se responsabiliza por danos indiretos decorrentes do uso deste site ou de informações nele contidas.</p>
-
-                <h3>7. Alterações nos Termos</h3>
-                <p>Estes termos podem ser alterados a qualquer momento, sem aviso prévio. Recomendamos a revisão periódica.</p>
-
-                <p><em>Última atualização: Maio de 2025.</em></p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p>📧 <a href="mailto:larissaferreiragb@gmail.com">larissaferreiragb@gmail.com</a></p>
-                <p>📞 <a href="tel:+5547989115054">(47) 98911-5054</a></p>
-                <p>💬 WhatsApp: <a href="https://wa.me/5547989115054" target="_blank">(47) 98911-5054</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Endereço</h4>
-                <p>Rua Wilfried Antonio Weihermann, 240</p>
-                <p>Bairro Lencol</p>
-                <p>São Bento do Sul - SC</p>
-                <p>CEP: 89289-590</p>
-            </div>
-            <div class="footer-col">
-                <h4>Links Rápidos</h4>
-                <p><a href="#" onclick="mostrarSecao('inicio')">Início</a></p>
-                <p><a href="#" onclick="mostrarSecao('sobre')">Sobre</a></p>
-                <p><a href="#" onclick="mostrarSecao('politicas')">Políticas de Privacidade</a></p>
-                <p><a href="#" onclick="mostrarSecao('termos')">Termos de Uso</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Horário de Atendimento</h4>
-                <div class="footer-horario">
-                    <p>🕒 <span id="horarioFooter">Carregando...</span></p>
-                    <p style="font-size:0.85rem; opacity:0.8; margin-top:5px;">Segunda a Sábado, das 08h às 20h</p>
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <h4>📞 Fale Conosco</h4>
+                    <div class="contato-linha">
+                        <span class="ico">📧</span>
+                        <div>
+                            <strong>E-mail</strong><br>
+                            <a href="mailto:larissaferreiragb@gmail.com">larissaferreiragb@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contato-linha">
+                        <span class="ico">📱</span>
+                        <div>
+                            <strong>Telefone / WhatsApp</strong><br>
+                            <a href="tel:+5547989115054">(47) 98911-5054</a>
+                        </div>
+                    </div>
+                    <div class="contato-linha">
+                        <span class="ico">💬</span>
+                        <div>
+                            <strong>WhatsApp Direto</strong><br>
+                            <a href="https://wa.me/5547989115054" target="_blank">Chamar no WhatsApp</a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="contato-card">
+                    <h4>📍 Onde Estamos</h4>
+                    <div class="contato-linha">
+                        <span class="ico">🏠</span>
+                        <div>
+                            <strong>Endereço</strong><br>
+                            Rua Wilfried Antonio Weihermann, 240<br>
+                            Bairro Lencol
+                        </div>
+                    </div>
+                    <div class="contato-linha">
+                        <span class="ico">🏙️</span>
+                        <div>
+                            <strong>Cidade / Estado</strong><br>
+                            São Bento do Sul — Santa Catarina
+                        </div>
+                    </div>
+                    <div class="contato-linha">
+                        <span class="ico">📮</span>
+                        <div>
+                            <strong>CEP</strong><br>
+                            89289-590
+                        </div>
+                    </div>
+                    <div class="contato-linha">
+                        <span class="ico">🗺️</span>
+                        <div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Wilfried+Antonio+Weihermann+240+Lencol+São+Bento+do+Sul+SC+89289-590" target="_blank">Ver no Google Maps →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PÁGINA SOBRE -->
+    <section id="sobre" class="pagina-institucional">
+        <h2>Sobre Nós</h2>
+        <p>A empresa <strong>61.032.057 Larissa Ferreira Denck</strong>, inscrita no CNPJ <strong>61.032.057/0001-67</strong>, foi fundada em <strong>27/05/2025</strong> na cidade de <strong>São Bento do Sul</strong>, estado de <strong>Santa Catarina</strong>.</p>
+
+        <p>Sua atividade principal, conforme a Receita Federal, é <strong>56.20-1-04 — Fornecimento de alimentos preparados preponderantemente para consumo domiciliar</strong>. Atuamos levando até a sua casa refeições preparadas com cuidado, sabor e qualidade.</p>
+
+        <p>A empresa é classificada como <strong>Micro Empresa</strong>, de natureza jurídica <strong>Empresário (Individual)</strong>, optante pelo <strong>Simples Nacional</strong> desde a sua abertura, com situação cadastral <strong>Ativa</strong>.</p>
+
+        <h3>Nossa Missão</h3>
+        <p>Proporcionar refeições saborosas e de qualidade, com atendimento ágil e confiável, atendendo às necessidades domiciliares de nossos clientes em São Bento do Sul e região.</p>
+
+        <h3>Nossa Visão</h3>
+        <p>Ser referência em fornecimento de alimentos preparados para consumo domiciliar, reconhecida pelo sabor, pela confiança e pelo cuidado com cada pedido.</p>
+
+        <h3>Nossos Valores</h3>
+        <ul>
+            <li>Qualidade e higiene em primeiro lugar;</li>
+            <li>Compromisso e respeito com o cliente;</li>
+            <li>Pontualidade nas entregas;</li>
+            <li>Transparência em todas as relações;</li>
+            <li>Amor pelo que fazemos.</li>
+        </ul>
+    </section>
+
+    <!-- PÁGINA POLÍTICAS DE PRIVACIDADE -->
+    <section id="politicas" class="pagina-institucional">
+        <h2>Políticas de Privacidade</h2>
+        <p>A <strong>61.032.057 Larissa Ferreira Denck</strong>, CNPJ <strong>61.032.057/0001-67</strong>, valoriza a privacidade e a segurança dos dados de seus clientes. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais fornecidas por você.</p>
+
+        <h3>1. Coleta de Informações</h3>
+        <p>Coletamos informações pessoais como nome, endereço, telefone e e-mail quando você realiza um pedido, entra em contato conosco ou se cadastra em nossos canais de atendimento.</p>
+
+        <h3>2. Uso das Informações</h3>
+        <p>As informações coletadas são utilizadas para:</p>
+        <ul>
+            <li>Processar e entregar pedidos;</li>
+            <li>Entrar em contato sobre pedidos ou solicitações;</li>
+            <li>Melhorar nossos serviços e atendimento;</li>
+            <li>Enviar comunicações promocionais (com consentimento).</li>
+        </ul>
+
+        <h3>3. Compartilhamento de Dados</h3>
+        <p>Não compartilhamos suas informações pessoais com terceiros, exceto quando necessário para processar pagamentos ou realizar entregas, ou quando exigido por lei.</p>
+
+        <h3>4. Segurança</h3>
+        <p>Adotamos medidas de segurança para proteger seus dados contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+
+        <h3>5. Seus Direitos</h3>
+        <p>Você tem o direito de solicitar acesso, correção ou exclusão de seus dados pessoais. Para isso, entre em contato pelo e-mail: <a href="mailto:larissaferreiragb@gmail.com" style="color:var(--verde-medio); font-weight:600;">larissaferreiragb@gmail.com</a>.</p>
+
+        <h3>6. Alterações nesta Política</h3>
+        <p>Esta política pode ser atualizada periodicamente. Recomendamos que você a revise regularmente.</p>
+
+        <p><em>Última atualização: Maio de 2025.</em></p>
+    </section>
+
+    <!-- PÁGINA TERMOS DE USO -->
+    <section id="termos" class="pagina-institucional">
+        <h2>Termos de Uso</h2>
+        <p>Bem-vindo ao site da <strong>61.032.057 Larissa Ferreira Denck</strong>. Ao acessar e utilizar este site, você concorda com os seguintes Termos de Uso. Leia-os atentamente.</p>
+
+        <h3>1. Aceitação dos Termos</h3>
+        <p>Ao utilizar este site, você declara ter lido, compreendido e aceito todos os termos e condições aqui descritos.</p>
+
+        <h3>2. Uso do Site</h3>
+        <p>O conteúdo deste site é para uso informativo e para realização de pedidos. Você concorda em não utilizar o site para fins ilícitos ou não autorizados.</p>
+
+        <h3>3. Pedidos e Pagamentos</h3>
+        <p>Os pedidos estão sujeitos à disponibilidade e confirmação. Os preços e condições podem ser alterados sem aviso prévio. O pagamento deve ser realizado conforme as opções oferecidas no momento do pedido.</p>
+
+        <h3>4. Entregas</h3>
+        <p>As entregas são realizadas na região de São Bento do Sul e arredores, conforme prazos e taxas informados no momento do pedido.</p>
+
+        <h3>5. Propriedade Intelectual</h3>
+        <p>Todo o conteúdo deste site, incluindo textos, imagens e logotipos, é de propriedade da empresa e não pode ser reproduzido sem autorização.</p>
+
+        <h3>6. Limitação de Responsabilidade</h3>
+        <p>A empresa não se responsabiliza por danos indiretos decorrentes do uso deste site ou de informações nele contidas.</p>
+
+        <h3>7. Alterações nos Termos</h3>
+        <p>Estes termos podem ser alterados a qualquer momento, sem aviso prévio. Recomendamos a revisão periódica.</p>
+
+        <p><em>Última atualização: Maio de 2025.</em></p>
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="footer-inner">
+
+        <div class="footer-col">
+            <h4>🍲 Larissa Ferreira Denck</h4>
+            <p>Alimentos preparados preponderantemente para consumo domiciliar em São Bento do Sul - SC.</p>
+            <p style="margin-top:12px;"><strong style="color:#fff;">CNPJ:</strong> 61.032.057/0001-67</p>
+            <p><strong style="color:#fff;">Razão Social:</strong> 61.032.057 Larissa Ferreira Denck</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>📞 Contato</h4>
+            <p>📧 <a href="mailto:larissaferreiragb@gmail.com">larissaferreiragb@gmail.com</a></p>
+            <p>📱 <a href="tel:+5547989115054">(47) 98911-5054</a></p>
+            <p>💬 <a href="https://wa.me/5547989115054" target="_blank">WhatsApp</a></p>
+        </div>
+
+        <div class="footer-col">
+            <h4>📍 Localização</h4>
+            <p>Rua Wilfried Antonio Weihermann, 240</p>
+            <p>Bairro Lencol</p>
+            <p>São Bento do Sul — SC</p>
+            <p>CEP: 89289-590</p>
+            <p style="margin-top:8px;">
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Wilfried+Antonio+Weihermann+240+Lencol+São+Bento+do+Sul+SC+89289-590" target="_blank">Ver no Google Maps →</a>
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>🔗 Institucional</h4>
+            <a href="#" onclick="mostrarSecao('sobre'); return false;">Sobre</a>
+            <a href="#" onclick="mostrarSecao('politicas'); return false;">Políticas de Privacidade</a>
+            <a href="#" onclick="mostrarSecao('termos'); return false;">Termos de Uso</a>
+            <a href="#" onclick="mostrarSecao('inicio'); return false;">Início</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>🕒 Horário</h4>
+            <div class="footer-horario">
+                <div class="hora" id="horarioFooter">Carregando...</div>
+                <p style="font-size:0.82rem; margin:0; opacity:0.85;">Segunda a Sábado — 08h às 20h</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 61.032.057 Larissa Ferreira Denck - CNPJ: 61.032.057/0001-67. Todos os direitos reservados.</p>
-            <p>Atividade: 56.20-1-04 - Fornecimento de alimentos preparados preponderantemente para consumo domiciliar.</p>
-        </div>
-    </footer>
 
-    <script>
-        // Função para alternar entre as seções
-        function mostrarSecao(idSecao) {
-            // Esconde todas as seções
-            const secoes = document.querySelectorAll('.page-section');
-            secoes.forEach(secao => secao.classList.remove('active'));
+    </div>
 
-            // Mostra a seção clicada
-            const secaoAtiva = document.getElementById(idSecao);
-            if (secaoAtiva) {
-                secaoAtiva.classList.add('active');
+    <div class="footer-bottom">
+        <p>&copy; 2025 61.032.057 Larissa Ferreira Denck — CNPJ: 61.032.057/0001-67. Todos os direitos reservados.</p>
+        <p>Atividade Principal: 56.20-1-04 — Fornecimento de alimentos preparados preponderantemente para consumo domiciliar.</p>
+        <p>Situação Cadastral: Ativa | Micro Empresa | Simples Nacional</p>
+    </div>
+</footer>
+
+<script>
+    // Troca de seções institucionais
+    function mostrarSecao(id) {
+        document.querySelectorAll('.pagina-institucional').forEach(s => s.classList.remove('ativa'));
+        const alvo = document.getElementById(id);
+        if (alvo) alvo.classList.add('ativa');
+
+        // Atualiza menu ativo
+        document.querySelectorAll('.menu-inner a').forEach(a => a.classList.remove('ativo'));
+        document.querySelectorAll('.menu-inner a').forEach(a => {
+            if (a.getAttribute('onclick') && a.getAttribute('onclick').includes(id)) {
+                a.classList.add('ativo');
             }
-
-            // Rola para o topo do conteúdo
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Previne o comportamento padrão do link
-            return false;
-        }
-
-        // Função para atualizar o horário
-        function atualizarHorario() {
-            const agora = new Date();
-            
-            // Formatação da data e hora
-            const dia = String(agora.getDate()).padStart(2, '0');
-            const mes = String(agora.getMonth() + 1).padStart(2, '0');
-            const ano = agora.getFullYear();
-            const horas = String(agora.getHours()).padStart(2, '0');
-            const minutos = String(agora.getMinutes()).padStart(2, '0');
-            const segundos = String(agora.getSeconds()).padStart(2, '0');
-            
-            const dataHora = `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
-
-            // Atualiza os elementos
-            const headerEl = document.getElementById('horarioHeader');
-            const footerEl = document.getElementById('horarioFooter');
-            
-            if (headerEl) headerEl.textContent = dataHora;
-            if (footerEl) footerEl.textContent = dataHora;
-        }
-
-        // Inicializa o horário e atualiza a cada segundo
-        atualizarHorario();
-        setInterval(atualizarHorario, 1000);
-
-        // Garante que a seção Início esteja ativa ao carregar
-        document.addEventListener('DOMContentLoaded', () => {
-            mostrarSecao('inicio');
         });
-    </script>
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return false;
+    }
+
+    // Relógio em tempo real no rodapé
+    function atualizarHorario() {
+        const agora = new Date();
+        const dia = String(agora.getDate()).padStart(2, '0');
+        const mes = String(agora.getMonth() + 1).padStart(2, '0');
+        const ano = agora.getFullYear();
+        const horas = String(agora.getHours()).padStart(2, '0');
+        const minutos = String(agora.getMinutes()).padStart(2, '0');
+        const segundos = String(agora.getSeconds()).padStart(2, '0');
+        const dataHora = `${dia}/${mes}/${ano} — ${horas}:${minutos}:${segundos}`;
+
+        const el = document.getElementById('horarioFooter');
+        if (el) el.textContent = dataHora;
+    }
+
+    atualizarHorario();
+    setInterval(atualizarHorario, 1000);
+
+    // Inicializa com a seção Início
+    document.addEventListener('DOMContentLoaded', () => {
+        mostrarSecao('inicio');
+    });
+</script>
 
 </body>
 </html>
