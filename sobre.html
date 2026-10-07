@@ -3,53 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre Nós | Iuri Lucas Camargo Antunes</title>
+<title>Sobre Nós | Erica Verissima Alves dos Santos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
     :root {
-        --azul-escuro: #0c1f3a; --azul-medio: #1b3e6f; --azul-claro: #2e6fb8;
-        --laranja: #ff8c00; --cinza-claro: #f4f6f9; --cinza-borda: #e0e6ed;
-        --texto: #1a2230; --texto-suave: #5a6b80;
+        --roxo-escuro: #3b1a4e; --roxo-medio: #6a2c8f; --rosa-medio: #c8498f;
+        --rosa-claro: #e67cb0; --rosa-destaque: #ff4d94; --dourado: #f5b301;
+        --cinza-claro: #faf5f9; --cinza-borda: #ecdce7;
+        --texto: #2a1a30; --texto-suave: #7a6a82;
     }
-    body { background: #f7f9fc; color: var(--texto); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+    body { background: #fdf8fc; color: var(--texto); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
 
-    .topbar { background: var(--azul-escuro); color: #fff; font-size: 0.8rem; text-align: center; padding: 9px 15px; }
-    .topbar strong { color: var(--laranja); }
+    .topbar { background: var(--roxo-escuro); color: #fff; font-size: 0.8rem; text-align: center; padding: 9px 15px; }
+    .topbar strong { color: var(--dourado); }
 
-    header { background: #fff; border-bottom: 1px solid var(--cinza-borda); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    header { background: #fff; border-bottom: 1px solid var(--cinza-borda); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(59,26,78,0.06); }
     .header-main { max-width: 1280px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; gap: 25px; }
     .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-    .logo-icon { width: 55px; height: 55px; background: linear-gradient(135deg, var(--azul-medio), var(--azul-claro)); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.7rem; }
-    .logo-text h1 { font-size: 1.15rem; color: var(--azul-escuro); font-weight: 800; line-height: 1.15; }
+    .logo-icon { width: 55px; height: 55px; background: linear-gradient(135deg, var(--rosa-medio), var(--roxo-medio)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.7rem; }
+    .logo-text h1 { font-size: 1.15rem; color: var(--roxo-escuro); font-weight: 800; line-height: 1.15; }
     .logo-text span { font-size: 0.72rem; color: var(--texto-suave); font-weight: 500; }
 
     .header-icons { display: flex; gap: 20px; align-items: center; margin-left: auto; }
     .icon-btn { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: var(--texto); font-size: 0.72rem; font-weight: 600; }
-    .icon-btn:hover { color: var(--azul-medio); }
+    .icon-btn:hover { color: var(--rosa-medio); }
     .icon-btn .ico { font-size: 1.5rem; }
 
-    .menu-categorias { background: var(--azul-medio); }
+    .menu-categorias { background: var(--roxo-medio); }
     .menu-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; gap: 3px; overflow-x: auto; }
     .menu-inner a { color: #fff; text-decoration: none; padding: 14px 18px; font-size: 0.86rem; font-weight: 600; white-space: nowrap; border-bottom: 3px solid transparent; display: flex; align-items: center; gap: 6px; }
-    .menu-inner a:hover, .menu-inner a.ativo { background: rgba(255,255,255,0.13); border-bottom-color: var(--laranja); }
+    .menu-inner a:hover, .menu-inner a.ativo { background: rgba(255,255,255,0.13); border-bottom-color: var(--dourado); }
 
     .pagina { max-width: 1000px; margin: 0 auto; padding: 55px 20px; width: 100%; flex: 1; }
-    .pagina h2 { color: var(--azul-escuro); font-size: 2.2rem; margin-bottom: 25px; border-left: 6px solid var(--laranja); padding-left: 18px; }
-    .pagina h3 { color: var(--azul-medio); font-size: 1.2rem; margin: 26px 0 10px; }
-    .pagina p { margin-bottom: 14px; color: #33404a; text-align: justify; }
-    .pagina ul { margin: 0 0 15px 25px; color: #33404a; }
+    .pagina h2 { color: var(--roxo-escuro); font-size: 2.2rem; margin-bottom: 25px; border-left: 6px solid var(--rosa-destaque); padding-left: 18px; }
+    .pagina h3 { color: var(--rosa-medio); font-size: 1.2rem; margin: 26px 0 10px; }
+    .pagina p { margin-bottom: 14px; color: #4a3a52; text-align: justify; }
+    .pagina ul { margin: 0 0 15px 25px; color: #4a3a52; }
     .pagina ul li { margin-bottom: 8px; }
-    .pagina a { color: var(--azul-medio); font-weight: 600; text-decoration: none; }
+    .pagina a { color: var(--rosa-medio); font-weight: 600; text-decoration: none; }
     .pagina a:hover { text-decoration: underline; }
 
-    footer { background: var(--azul-escuro); color: #cfdceb; padding: 50px 20px 20px; margin-top: auto; }
+    footer { background: var(--roxo-escuro); color: #e6d5ee; padding: 50px 20px 20px; margin-top: auto; }
     .footer-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px; }
-    .footer-col h4 { color: var(--laranja); font-size: 0.95rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .footer-col p, .footer-col a { font-size: 0.88rem; color: #cfdceb; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; }
-    .footer-col a:hover { color: var(--laranja); }
-    .footer-horario { background: rgba(255,255,255,0.07); border-left: 3px solid var(--laranja); padding: 12px 15px; border-radius: 6px; margin-top: 8px; }
+    .footer-col h4 { color: var(--dourado); font-size: 0.95rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col p, .footer-col a { font-size: 0.88rem; color: #e6d5ee; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; }
+    .footer-col a:hover { color: var(--dourado); }
+    .footer-horario { background: rgba(255,255,255,0.07); border-left: 3px solid var(--dourado); padding: 12px 15px; border-radius: 6px; margin-top: 8px; }
     .footer-horario .hora { font-size: 1.02rem; font-weight: 700; color: #fff; margin-bottom: 5px; }
-    .footer-bottom { max-width: 1280px; margin: 35px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); text-align: center; font-size: 0.78rem; color: #a8bfae; line-height: 1.8; }
+    .footer-bottom { max-width: 1280px; margin: 35px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); text-align: center; font-size: 0.78rem; color: #c9b3d4; line-height: 1.8; }
 
     @media (max-width: 600px) {
         .logo-text h1 { font-size: 1rem; }
@@ -63,22 +64,22 @@
 </head>
 <body>
 
-<div class="topbar">🛠️ Atendemos <strong>Porto Alegre e região</strong> — Revestimentos e resinas com qualidade!</div>
+<div class="topbar">💖 Atendemos <strong>Parnaíba e região</strong> — Realce sua beleza com quem entende!</div>
 
 <header>
     <div class="header-main">
         <a href="index.html" class="logo-area">
-            <div class="logo-icon">🎨</div>
+            <div class="logo-icon">💅</div>
             <div class="logo-text">
-                <h1>Iuri Lucas Camargo Antunes</h1>
-                <span>Aplicação de Revestimentos e Resinas</span>
+                <h1>Erica Verissima Alves dos Santos</h1>
+                <span>Estética e Cuidados com a Beleza</span>
             </div>
         </a>
         <div class="header-icons">
-            <a href="https://wa.me/5551994505803" target="_blank" class="icon-btn">
+            <a href="https://wa.me/5586994761256" target="_blank" class="icon-btn">
                 <span class="ico">💬</span><span class="txt">WhatsApp</span>
             </a>
-            <a href="tel:+5551994505803" class="icon-btn">
+            <a href="tel:+5586994761256" class="icon-btn">
                 <span class="ico">📞</span><span class="txt">Ligar</span>
             </a>
         </div>
@@ -97,60 +98,60 @@
 <main class="pagina">
     <h2>Sobre Nós</h2>
 
-    <p>A empresa <strong>66.189.844 Iuri Lucas Camargo Antunes</strong>, inscrita no CNPJ <strong>66.189.844/0001-30</strong>, foi fundada em <strong>10/04/2026</strong> na cidade de <strong>Porto Alegre</strong>, estado do <strong>Rio Grande do Sul</strong>.</p>
+    <p>A empresa <strong>58.551.728 Erica Verissima Alves dos Santos</strong>, inscrita no CNPJ <strong>58.551.728/0001-91</strong>, foi fundada em <strong>25/12/2024</strong> na cidade de <strong>Parnaíba</strong>, estado do <strong>Piauí</strong>.</p>
 
-    <p>Sua atividade principal, conforme a Receita Federal, é <strong>43.30-4-05 — Aplicação de revestimentos e de resinas em interiores e exteriores</strong>. Também atuamos com a atividade secundária <strong>43.99-1-03 — Obras de alvenaria</strong>, oferecendo soluções completas em construção e acabamento.</p>
+    <p>Sua atividade principal, conforme a Receita Federal, é <strong>96.02-5-02 — Atividades de estética e outros serviços de cuidados com a beleza</strong>. Também atuamos com a atividade secundária <strong>90.01-9-02 — Produção musical</strong>, unindo beleza e arte em nossos projetos.</p>
 
     <p>A empresa é classificada como <strong>Microempreendedor Individual (MEI)</strong>, de natureza jurídica <strong>Empresário (Individual)</strong>, optante pelo <strong>Simples Nacional</strong> desde a sua abertura, com situação cadastral <strong>Ativa</strong>.</p>
 
     <h3>Nossa Missão</h3>
-    <p>Oferecer serviços de aplicação de revestimentos e resinas com qualidade técnica, prazos cumpridos e acabamento profissional, atendendo residências e empresas em Porto Alegre e região.</p>
+    <p>Proporcionar experiências de beleza e bem-estar, com atendimento acolhedor e técnicas profissionais que valorizam a autoestima de cada cliente em Parnaíba e região.</p>
 
     <h3>Nossa Visão</h3>
-    <p>Ser reconhecido como referência em aplicação de revestimentos e resinas no Rio Grande do Sul, destacando-se pela confiança, capricho e durabilidade dos serviços.</p>
+    <p>Ser referência em estética e cuidados com a beleza no Piauí, reconhecida pela qualidade dos serviços, pelo carinho no atendimento e pela satisfação dos clientes.</p>
 
     <h3>Nossos Valores</h3>
     <ul>
-        <li>Qualidade e acabamento profissional;</li>
-        <li>Compromisso com prazos e orçamentos;</li>
-        <li>Respeito e transparência com o cliente;</li>
-        <li>Segurança em todas as etapas da obra;</li>
-        <li>Amor pela arte de transformar ambientes.</li>
+        <li>Respeito e cuidado com cada cliente;</li>
+        <li>Qualidade técnica e produtos de confiança;</li>
+        <li>Ambiente acolhedor e profissional;</li>
+        <li>Ética, transparência e pontualidade;</li>
+        <li>Amor pela arte de realçar a beleza.</li>
     </ul>
 
     <h3>Serviços Oferecidos</h3>
     <ul>
-        <li>Aplicação de revestimentos cerâmicos, porcelanatos e pedras;</li>
-        <li>Aplicação de resinas epóxi e poliuretano;</li>
-        <li>Revestimentos em interiores (salas, quartos, cozinhas, banheiros);</li>
-        <li>Revestimentos em exteriores (fachadas, varandas, áreas externas);</li>
-        <li>Obras de alvenaria em geral;</li>
-        <li>Reformas residenciais e comerciais.</li>
+        <li>Estética facial e limpeza de pele;</li>
+        <li>Tratamentos de skincare personalizados;</li>
+        <li>Manicure, pedicure e nail art;</li>
+        <li>Design de sobrancelhas e henna;</li>
+        <li>Maquiagem social e profissional;</li>
+        <li>Tratamentos capilares e cuidados com os cabelos.</li>
     </ul>
 
     <h3>Localização</h3>
-    <p><strong>Endereço:</strong> Rua Francisco Martins, 654 — Bairro Cascata, Porto Alegre/RS — CEP 91712-150.</p>
-    <p><strong>Contato:</strong> <a href="mailto:camargoiurilucas@gmail.com">camargoiurilucas@gmail.com</a> | <a href="tel:+5551994505803">(51) 99450-5803</a></p>
+    <p><strong>Endereço:</strong> Rua Itauna, 1067 — Bairro Pindorama, Parnaíba/PI — CEP 64215-319.</p>
+    <p><strong>Contato:</strong> <a href="mailto:inovassessoriacontabil@gmail.com">inovassessoriacontabil@gmail.com</a> | <a href="tel:+5586994761256">(86) 99476-1256</a></p>
 </main>
 
 <footer>
     <div class="footer-inner">
         <div class="footer-col">
-            <h4>🎨 Iuri Lucas Camargo Antunes</h4>
-            <p>Aplicação de revestimentos e resinas em interiores e exteriores em Porto Alegre - RS.</p>
-            <p style="margin-top:12px;"><strong style="color:#fff;">CNPJ:</strong> 66.189.844/0001-30</p>
+            <h4>💅 Erica Verissima Alves dos Santos</h4>
+            <p>Atividades de estética e outros serviços de cuidados com a beleza em Parnaíba - PI.</p>
+            <p style="margin-top:12px;"><strong style="color:#fff;">CNPJ:</strong> 58.551.728/0001-91</p>
         </div>
         <div class="footer-col">
             <h4>📞 Contato</h4>
-            <p>📧 <a href="mailto:camargoiurilucas@gmail.com">camargoiurilucas@gmail.com</a></p>
-            <p>📱 <a href="tel:+5551994505803">(51) 99450-5803</a></p>
-            <p>💬 <a href="https://wa.me/5551994505803" target="_blank">WhatsApp</a></p>
+            <p>📧 <a href="mailto:inovassessoriacontabil@gmail.com">inovassessoriacontabil@gmail.com</a></p>
+            <p>📱 <a href="tel:+5586994761256">(86) 99476-1256</a></p>
+            <p>💬 <a href="https://wa.me/5586994761256" target="_blank">WhatsApp</a></p>
         </div>
         <div class="footer-col">
             <h4>📍 Localização</h4>
-            <p>Rua Francisco Martins, 654</p>
-            <p>Bairro Cascata — Porto Alegre/RS</p>
-            <p>CEP: 91712-150</p>
+            <p>Rua Itauna, 1067</p>
+            <p>Bairro Pindorama — Parnaíba/PI</p>
+            <p>CEP: 64215-319</p>
         </div>
         <div class="footer-col">
             <h4>🔗 Institucional</h4>
@@ -163,14 +164,14 @@
             <h4>🕒 Horário</h4>
             <div class="footer-horario">
                 <div class="hora" id="horarioFooter">Carregando...</div>
-                <p style="font-size:0.8rem; margin:0; opacity:0.85;">Segunda a Sábado — 08h às 18h</p>
+                <p style="font-size:0.8rem; margin:0; opacity:0.85;">Segunda a Sábado — 08h às 19h</p>
             </div>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 66.189.844 Iuri Lucas Camargo Antunes — CNPJ: 66.189.844/0001-30.</p>
-        <p>Atividade Principal: 43.30-4-05 — Aplicação de revestimentos e de resinas em interiores e exteriores.</p>
+        <p>&copy; 2024 58.551.728 Erica Verissima Alves dos Santos — CNPJ: 58.551.728/0001-91.</p>
+        <p>Atividade Principal: 96.02-5-02 — Atividades de estética e outros serviços de cuidados com a beleza.</p>
     </div>
 </footer>
 
