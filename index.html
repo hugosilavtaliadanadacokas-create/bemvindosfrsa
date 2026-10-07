@@ -3,138 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erica Verissima Alves dos Santos | Estética e Cuidados com a Beleza</title>
+<title>Iuri Lucas Camargo Antunes | Aplicação de Revestimentos e Resinas</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
 
     :root {
-        --roxo-escuro: #3b1a4e;
-        --roxo-medio: #6a2c8f;
-        --rosa-medio: #c8498f;
-        --rosa-claro: #e67cb0;
-        --rosa-destaque: #ff4d94;
-        --dourado: #f5b301;
-        --cinza-claro: #faf5f9;
-        --cinza-borda: #ecdce7;
-        --texto: #2a1a30;
-        --texto-suave: #7a6a82;
+        --azul-escuro: #0c1f3a;
+        --azul-medio: #1b3e6f;
+        --azul-claro: #2e6fb8;
+        --azul-destaque: #4a90e2;
+        --laranja: #ff8c00;
+        --cinza-claro: #f4f6f9;
+        --cinza-borda: #e0e6ed;
+        --texto: #1a2230;
+        --texto-suave: #5a6b80;
     }
 
-    body { background: #fdf8fc; color: var(--texto); line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+    body { background: #f7f9fc; color: var(--texto); line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
 
     /* ===== BARRA TOPO ===== */
-    .topbar { background: var(--roxo-escuro); color: #fff; font-size: 0.8rem; text-align: center; padding: 9px 15px; letter-spacing: 0.3px; }
-    .topbar strong { color: var(--dourado); }
+    .topbar { background: var(--azul-escuro); color: #fff; font-size: 0.8rem; text-align: center; padding: 9px 15px; letter-spacing: 0.3px; }
+    .topbar strong { color: var(--laranja); }
 
     /* ===== CABEÇALHO ===== */
-    header { background: #fff; border-bottom: 1px solid var(--cinza-borda); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(59,26,78,0.06); }
+    header { background: #fff; border-bottom: 1px solid var(--cinza-borda); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
     .header-main { max-width: 1280px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; gap: 25px; }
     .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; flex-shrink: 0; text-decoration: none; color: inherit; }
-    .logo-icon { width: 55px; height: 55px; background: linear-gradient(135deg, var(--rosa-medio), var(--roxo-medio)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.7rem; box-shadow: 0 4px 10px rgba(200,73,143,0.3); }
-    .logo-text h1 { font-size: 1.15rem; color: var(--roxo-escuro); font-weight: 800; line-height: 1.15; }
+    .logo-icon { width: 55px; height: 55px; background: linear-gradient(135deg, var(--azul-medio), var(--azul-claro)); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.7rem; box-shadow: 0 4px 10px rgba(27,62,111,0.3); }
+    .logo-text h1 { font-size: 1.15rem; color: var(--azul-escuro); font-weight: 800; line-height: 1.15; }
     .logo-text span { font-size: 0.72rem; color: var(--texto-suave); font-weight: 500; }
 
-    .search-box { flex: 1; display: flex; background: #fff; border: 2px solid var(--rosa-claro); border-radius: 8px; overflow: hidden; max-width: 700px; transition: box-shadow 0.3s; }
-    .search-box:focus-within { box-shadow: 0 0 0 4px rgba(230,124,176,0.18); }
+    .search-box { flex: 1; display: flex; background: #fff; border: 2px solid var(--azul-claro); border-radius: 8px; overflow: hidden; max-width: 700px; transition: box-shadow 0.3s; }
+    .search-box:focus-within { box-shadow: 0 0 0 4px rgba(46,111,184,0.15); }
     .search-box input { flex: 1; border: none; padding: 13px 18px; font-size: 0.92rem; outline: none; color: var(--texto); }
-    .search-box button { background: var(--rosa-medio); color: #fff; border: none; padding: 0 26px; cursor: pointer; font-weight: 700; font-size: 0.9rem; }
-    .search-box button:hover { background: var(--roxo-medio); }
+    .search-box button { background: var(--azul-medio); color: #fff; border: none; padding: 0 26px; cursor: pointer; font-weight: 700; font-size: 0.9rem; }
+    .search-box button:hover { background: var(--azul-escuro); }
 
     .header-icons { display: flex; gap: 20px; align-items: center; }
     .icon-btn { display: flex; flex-direction: column; align-items: center; gap: 3px; text-decoration: none; color: var(--texto); font-size: 0.72rem; font-weight: 600; position: relative; transition: color 0.3s; }
-    .icon-btn:hover { color: var(--rosa-medio); }
+    .icon-btn:hover { color: var(--azul-medio); }
     .icon-btn .ico { font-size: 1.5rem; line-height: 1; }
-    .icon-btn .badge-cart { position: absolute; top: -6px; right: -8px; background: var(--rosa-destaque); color: #fff; font-size: 0.65rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .icon-btn .badge-cart { position: absolute; top: -6px; right: -8px; background: #e53935; color: #fff; font-size: 0.65rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
     /* ===== MENU ===== */
-    .menu-categorias { background: var(--roxo-medio); }
+    .menu-categorias { background: var(--azul-medio); }
     .menu-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; gap: 3px; overflow-x: auto; scrollbar-width: thin; }
     .menu-inner a { color: #fff; text-decoration: none; padding: 14px 18px; font-size: 0.86rem; font-weight: 600; white-space: nowrap; border-bottom: 3px solid transparent; transition: background 0.3s, border-color 0.3s; display: flex; align-items: center; gap: 6px; }
-    .menu-inner a:hover, .menu-inner a.ativo { background: rgba(255,255,255,0.13); border-bottom-color: var(--dourado); }
+    .menu-inner a:hover, .menu-inner a.ativo { background: rgba(255,255,255,0.13); border-bottom-color: var(--laranja); }
 
     /* ===== BANNER ===== */
-    .banner { background: linear-gradient(120deg, var(--roxo-escuro) 0%, var(--roxo-medio) 55%, var(--rosa-medio) 100%); color: #fff; padding: 65px 20px; position: relative; overflow: hidden; }
-    .banner::before { content: "💅"; position: absolute; right: 6%; top: 50%; transform: translateY(-50%); font-size: 16rem; opacity: 0.1; }
+    .banner { background: linear-gradient(120deg, var(--azul-escuro) 0%, var(--azul-medio) 55%, var(--azul-claro) 100%); color: #fff; padding: 65px 20px; position: relative; overflow: hidden; }
+    .banner::before { content: "🎨"; position: absolute; right: 6%; top: 50%; transform: translateY(-50%); font-size: 16rem; opacity: 0.1; }
     .banner-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
-    .banner-tag { display: inline-block; background: var(--dourado); color: var(--roxo-escuro); font-size: 0.75rem; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 18px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .banner-tag { display: inline-block; background: var(--laranja); color: var(--azul-escuro); font-size: 0.75rem; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 18px; letter-spacing: 0.5px; text-transform: uppercase; }
     .banner h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; line-height: 1.15; max-width: 680px; }
     .banner p { font-size: 1.08rem; margin-bottom: 28px; max-width: 620px; opacity: 0.95; }
     .banner-botoes { display: flex; gap: 15px; flex-wrap: wrap; }
 
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
     .btn-whats { background: #25d366; color: #fff; }
-    .btn-rosa { background: var(--rosa-destaque); color: #fff; }
+    .btn-laranja { background: var(--laranja); color: var(--azul-escuro); }
 
     /* ===== SEÇÃO ===== */
     .secao { max-width: 1280px; margin: 0 auto; padding: 55px 20px; width: 100%; }
     .secao-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 12px; }
-    .secao-header h3 { font-size: 1.7rem; color: var(--roxo-escuro); font-weight: 800; }
-    .secao-header h3::before { content: ""; display: inline-block; width: 5px; height: 22px; background: var(--rosa-destaque); border-radius: 4px; margin-right: 12px; vertical-align: middle; }
-    .secao-header a { color: var(--rosa-medio); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .secao-header h3 { font-size: 1.7rem; color: var(--azul-escuro); font-weight: 800; }
+    .secao-header h3::before { content: ""; display: inline-block; width: 5px; height: 22px; background: var(--laranja); border-radius: 4px; margin-right: 12px; vertical-align: middle; }
+    .secao-header a { color: var(--azul-medio); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
     .secao-header a:hover { text-decoration: underline; }
 
-    /* ===== SERVIÇOS ===== */
+    /* ===== SERVIÇOS (CARD) ===== */
     .servicos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
     .servico-card { background: #fff; border: 1px solid var(--cinza-borda); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
-    .servico-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(106,44,143,0.14); }
-    .servico-imagem { height: 190px; background: linear-gradient(135deg, #fbe6f2, #eccfe3); position: relative; overflow: hidden; }
+    .servico-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(12,31,58,0.12); }
+    .servico-imagem { height: 180px; background: linear-gradient(135deg, #e3edf9, #c8dcf0); position: relative; overflow: hidden; }
     .servico-imagem img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
     .servico-card:hover .servico-imagem img { transform: scale(1.07); }
-    .servico-tag { position: absolute; top: 10px; left: 10px; background: var(--rosa-destaque); color: #fff; font-size: 0.68rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; z-index: 2; }
-    .servico-tag.novo { background: var(--roxo-medio); }
+    .servico-tag { position: absolute; top: 10px; left: 10px; background: #e53935; color: #fff; font-size: 0.68rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; z-index: 2; }
+    .servico-tag.novo { background: var(--azul-claro); }
     .servico-info { padding: 16px; flex: 1; display: flex; flex-direction: column; }
     .servico-info h4 { font-size: 0.98rem; color: var(--texto); font-weight: 700; margin-bottom: 6px; line-height: 1.3; }
     .servico-info p { font-size: 0.82rem; color: var(--texto-suave); margin-bottom: 12px; flex: 1; }
-    .servico-preco { font-size: 1.15rem; font-weight: 800; color: var(--rosa-medio); margin-bottom: 12px; }
+    .servico-preco { font-size: 1.15rem; font-weight: 800; color: var(--azul-medio); margin-bottom: 12px; }
     .servico-preco small { font-size: 0.7rem; color: var(--texto-suave); font-weight: 500; display: block; }
-    .btn-add { background: var(--rosa-medio); color: #fff; border: none; padding: 11px; border-radius: 30px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
-    .btn-add:hover { background: var(--roxo-medio); }
+    .btn-add { background: var(--azul-medio); color: #fff; border: none; padding: 11px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
+    .btn-add:hover { background: var(--azul-escuro); }
 
     /* ===== CATEGORIAS ===== */
     .categorias-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; }
     .categoria-item { background: #fff; border: 1px solid var(--cinza-borda); border-radius: 14px; padding: 24px 15px; text-align: center; text-decoration: none; color: var(--texto); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
-    .categoria-item:hover { transform: translateY(-5px); box-shadow: 0 10px 22px rgba(106,44,143,0.1); border-color: var(--rosa-claro); }
-    .categoria-item .categoria-img { width: 80px; height: 80px; margin: 0 auto 14px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #fbe6f2, #eccfe3); display: flex; align-items: center; justify-content: center; border: 3px solid #fbe6f2; transition: transform 0.3s, border-color 0.3s; }
+    .categoria-item:hover { transform: translateY(-5px); box-shadow: 0 10px 22px rgba(12,31,58,0.1); border-color: var(--azul-claro); }
+    .categoria-item .categoria-img { width: 80px; height: 80px; margin: 0 auto 14px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #e3edf9, #c8dcf0); display: flex; align-items: center; justify-content: center; border: 3px solid #e3edf9; transition: transform 0.3s, border-color 0.3s; }
     .categoria-item .categoria-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .categoria-item:hover .categoria-img { transform: scale(1.08); border-color: var(--rosa-claro); }
-    .categoria-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--roxo-escuro); }
+    .categoria-item:hover .categoria-img { transform: scale(1.08); border-color: var(--azul-claro); }
+    .categoria-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--azul-escuro); }
     .categoria-item span { font-size: 0.75rem; color: var(--texto-suave); }
 
     /* ===== DADOS EMPRESA ===== */
     .dados-empresa { background: #fff; padding: 55px 20px; border-top: 1px solid var(--cinza-borda); }
     .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .dado-item { background: var(--cinza-claro); border-left: 4px solid var(--rosa-claro); border-radius: 8px; padding: 15px 18px; }
+    .dado-item { background: var(--cinza-claro); border-left: 4px solid var(--azul-claro); border-radius: 8px; padding: 15px 18px; }
     .dado-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--texto-suave); margin-bottom: 5px; font-weight: 700; }
     .dado-item span { font-size: 0.98rem; color: var(--texto); font-weight: 600; word-break: break-word; }
     .status-ativa { display: inline-block; background: #4caf50; color: #fff; padding: 3px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; }
-    .cnae-box { margin-top: 22px; background: var(--roxo-escuro); color: #fff; padding: 20px 24px; border-radius: 12px; }
-    .cnae-box strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--dourado); margin-bottom: 8px; }
+    .cnae-box { margin-top: 22px; background: var(--azul-escuro); color: #fff; padding: 20px 24px; border-radius: 12px; }
+    .cnae-box strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--laranja); margin-bottom: 8px; }
     .cnae-box p { font-size: 1.02rem; font-weight: 600; margin-bottom: 6px; }
     .cnae-box .sec { font-size: 0.92rem; opacity: 0.9; font-weight: 500; }
 
     /* ===== CONTATO E MAPA ===== */
     .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: stretch; }
     .contato-card { background: #fff; border: 1px solid var(--cinza-borda); border-radius: 14px; padding: 26px; }
-    .contato-card h4 { color: var(--roxo-escuro); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .contato-card h4 { color: var(--azul-escuro); font-size: 1.15rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
     .contato-linha { display: flex; align-items: flex-start; gap: 12px; padding: 11px 0; border-bottom: 1px dashed var(--cinza-borda); font-size: 0.93rem; }
     .contato-linha:last-of-type { border-bottom: none; }
     .contato-linha .ico { font-size: 1.2rem; flex-shrink: 0; }
-    .contato-linha a { color: var(--rosa-medio); text-decoration: none; font-weight: 600; }
+    .contato-linha a { color: var(--azul-medio); text-decoration: none; font-weight: 600; }
     .contato-linha a:hover { text-decoration: underline; }
     .contato-card .btn { width: 100%; justify-content: center; }
     .contato-mapa { padding: 0; overflow: hidden; min-height: 520px; }
     .contato-mapa iframe { width: 100%; height: 100%; border: 0; display: block; min-height: 520px; }
 
     /* ===== RODAPÉ ===== */
-    footer { background: var(--roxo-escuro); color: #e6d5ee; padding: 50px 20px 20px; margin-top: auto; }
+    footer { background: var(--azul-escuro); color: #cfdceb; padding: 50px 20px 20px; margin-top: auto; }
     .footer-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 35px; }
-    .footer-col h4 { color: var(--dourado); font-size: 0.95rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-    .footer-col p, .footer-col a { font-size: 0.88rem; color: #e6d5ee; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; }
-    .footer-col a:hover { color: var(--dourado); }
-    .footer-horario { background: rgba(255,255,255,0.07); border-left: 3px solid var(--dourado); padding: 12px 15px; border-radius: 6px; margin-top: 8px; }
+    .footer-col h4 { color: var(--laranja); font-size: 0.95rem; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+    .footer-col p, .footer-col a { font-size: 0.88rem; color: #cfdceb; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; }
+    .footer-col a:hover { color: var(--laranja); }
+    .footer-horario { background: rgba(255,255,255,0.07); border-left: 3px solid var(--laranja); padding: 12px 15px; border-radius: 6px; margin-top: 8px; }
     .footer-horario .hora { font-size: 1.02rem; font-weight: 700; color: #fff; margin-bottom: 5px; }
-    .footer-bottom { max-width: 1280px; margin: 35px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); text-align: center; font-size: 0.78rem; color: #c9b3d4; line-height: 1.8; }
+    .footer-bottom { max-width: 1280px; margin: 35px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); text-align: center; font-size: 0.78rem; color: #a8bfae; line-height: 1.8; }
 
     /* ===== RESPONSIVO ===== */
     @media (max-width: 1000px) {
@@ -166,38 +165,38 @@
 
 <!-- BARRA TOPO -->
 <div class="topbar">
-    💖 Atendemos <strong>Parnaíba e região</strong> — Realce sua beleza com quem entende do assunto!
+    🛠️ Atendemos <strong>Porto Alegre e região</strong> — Revestimentos e resinas com qualidade e garantia!
 </div>
 
 <!-- CABEÇALHO -->
 <header>
     <div class="header-main">
         <a href="index.html" class="logo-area">
-            <div class="logo-icon">💅</div>
+            <div class="logo-icon">🎨</div>
             <div class="logo-text">
-                <h1>Erica Verissima Alves dos Santos</h1>
-                <span>Estética e Cuidados com a Beleza</span>
+                <h1>Iuri Lucas Camargo Antunes</h1>
+                <span>Aplicação de Revestimentos e Resinas</span>
             </div>
         </a>
 
         <div class="search-box">
-            <input type="text" placeholder="Buscar por serviço, tratamento, estética...">
+            <input type="text" placeholder="Buscar por revestimento, resina, piso, parede...">
             <button type="button">Buscar</button>
         </div>
 
         <div class="header-icons">
-            <a href="https://wa.me/5586994761256" target="_blank" class="icon-btn">
+            <a href="https://wa.me/5551994505803" target="_blank" class="icon-btn">
                 <span class="ico">💬</span>
                 <span class="txt">WhatsApp</span>
             </a>
-            <a href="tel:+5586994761256" class="icon-btn">
+            <a href="tel:+5551994505803" class="icon-btn">
                 <span class="ico">📞</span>
                 <span class="txt">Ligar</span>
             </a>
             <a href="#" class="icon-btn">
-                <span class="ico">📅</span>
+                <span class="ico">📋</span>
                 <span class="badge-cart">0</span>
-                <span class="txt">Agenda</span>
+                <span class="txt">Orçamentos</span>
             </a>
         </div>
     </div>
@@ -206,12 +205,11 @@
     <nav class="menu-categorias">
         <div class="menu-inner">
             <a href="#inicio" class="ativo">🏠 Início</a>
-            <a href="#servicos">💅 Estética</a>
-            <a href="#servicos">💇‍♀️ Cabelos</a>
-            <a href="#servicos">💆‍♀️ Skincare</a>
-            <a href="#servicos">💄 Maquiagem</a>
-            <a href="#servicos">💅 Unhas</a>
-            <a href="#servicos">👁️ Sobrancelhas</a>
+            <a href="#servicos">🎨 Revestimentos</a>
+            <a href="#servicos">🧱 Resinas</a>
+            <a href="#servicos">🏠 Interiores</a>
+            <a href="#servicos">🌳 Exteriores</a>
+            <a href="#servicos">🧰 Alvenaria</a>
             <a href="sobre.html">ℹ️ Sobre</a>
             <a href="politicas.html">🔒 Privacidade</a>
             <a href="termos.html">📄 Termos</a>
@@ -224,12 +222,12 @@
     <!-- BANNER -->
     <section class="banner" id="inicio">
         <div class="banner-inner">
-            <span class="banner-tag">✨ Beleza & Bem-estar</span>
-            <h2>Realce sua beleza com cuidados profissionais</h2>
-            <p>Serviços de estética e cuidados com a beleza em Parnaíba - PI. Tratamentos personalizados, atendimento acolhedor e resultados que valorizam você.</p>
+            <span class="banner-tag">🛠️ Interiores e Exteriores</span>
+            <h2>Revestimentos e resinas com acabamento profissional</h2>
+            <p>Aplicação de revestimentos e resinas em interiores e exteriores em Porto Alegre - RS. Transforme seu ambiente com técnica, qualidade e garantia.</p>
             <div class="banner-botoes">
-                <a href="https://wa.me/5586994761256" target="_blank" class="btn btn-whats">💬 Agendar pelo WhatsApp</a>
-                <a href="#servicos" class="btn btn-rosa">✨ Ver Serviços</a>
+                <a href="https://wa.me/5551994505803" target="_blank" class="btn btn-whats">💬 Pedir Orçamento</a>
+                <a href="#servicos" class="btn btn-laranja">🔧 Ver Serviços</a>
             </div>
         </div>
     </section>
@@ -242,45 +240,45 @@
         <div class="categorias-grid">
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=200&q=80" alt="Estética Facial">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=200&q=80" alt="Revestimentos">
                 </div>
-                <h4>Estética Facial</h4>
-                <span>Limpeza e tratamentos</span>
+                <h4>Revestimentos</h4>
+                <span>Pisos e paredes</span>
             </a>
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=200&q=80" alt="Cabelos">
+                    <img src="https://images.unsplash.com/photo-1615874694520-474822394e73?w=200&q=80" alt="Resinas">
                 </div>
-                <h4>Cabelos</h4>
-                <span>Cortes e tratamentos</span>
+                <h4>Resinas</h4>
+                <span>Acabamento premium</span>
             </a>
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=200&q=80" alt="Skincare">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&q=80" alt="Interiores">
                 </div>
-                <h4>Skincare</h4>
-                <span>Cuidados com a pele</span>
+                <h4>Interiores</h4>
+                <span>Salas e quartos</span>
             </a>
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=200&q=80" alt="Maquiagem">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=200&q=80" alt="Exteriores">
                 </div>
-                <h4>Maquiagem</h4>
-                <span>Social e artística</span>
+                <h4>Exteriores</h4>
+                <span>Fachadas e áreas</span>
             </a>
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=200&q=80" alt="Unhas">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=200&q=80" alt="Alvenaria">
                 </div>
-                <h4>Unhas</h4>
-                <span>Manicure e nail art</span>
+                <h4>Alvenaria</h4>
+                <span>Obras e reparos</span>
             </a>
             <a href="#servicos" class="categoria-item">
                 <div class="categoria-img">
-                    <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=200&q=80" alt="Sobrancelhas">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=200&q=80" alt="Reformas">
                 </div>
-                <h4>Sobrancelhas</h4>
-                <span>Design e henna</span>
+                <h4>Reformas</h4>
+                <span>Projetos completos</span>
             </a>
         </div>
     </section>
@@ -289,83 +287,83 @@
     <section class="secao" id="servicos" style="padding-top:0;">
         <div class="secao-header">
             <h3>Serviços em Destaque</h3>
-            <a href="https://wa.me/5586994761256" target="_blank">Agendar agora →</a>
+            <a href="https://wa.me/5551994505803" target="_blank">Solicitar orçamento →</a>
         </div>
         <div class="servicos-grid">
 
             <div class="servico-card">
                 <div class="servico-imagem">
                     <span class="servico-tag">Popular</span>
-                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=500&q=80" alt="Limpeza de Pele">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&q=80" alt="Aplicação de Revestimento">
                 </div>
                 <div class="servico-info">
-                    <h4>Limpeza de Pele</h4>
-                    <p>Higienização profunda, extração e hidratação para revitalizar sua pele.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Aplicação de Revestimento</h4>
+                    <p>Instalação de revestimentos cerâmicos, porcelanatos e pedras em pisos e paredes.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="servico-card">
                 <div class="servico-imagem">
                     <span class="servico-tag novo">Novo</span>
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80" alt="Skincare">
+                    <img src="https://images.unsplash.com/photo-1615874694520-474822394e73?w=500&q=80" alt="Aplicação de Resina">
                 </div>
                 <div class="servico-info">
-                    <h4>Tratamento Facial</h4>
-                    <p>Protocolos personalizados para hidratação, rejuvenescimento e cuidados.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Aplicação de Resina</h4>
+                    <p>Resinas epóxi e poliuretano para acabamento de alto padrão em pisos e paredes.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="servico-card">
                 <div class="servico-imagem">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Manicure">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Revestimento de Interior">
                 </div>
                 <div class="servico-info">
-                    <h4>Manicure e Pedicure</h4>
-                    <p>Cuidado completo das unhas, com esmaltação e nail art personalizada.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Revestimento de Interiores</h4>
+                    <p>Salas, quartos, cozinhas e banheiros com acabamento fino e alinhamento perfeito.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="servico-card">
                 <div class="servico-imagem">
                     <span class="servico-tag">Popular</span>
-                    <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=500&q=80" alt="Design de Sobrancelha">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80" alt="Revestimento de Exterior">
                 </div>
                 <div class="servico-info">
-                    <h4>Design de Sobrancelhas</h4>
-                    <p>Modelagem com técnica personalizada e opção de aplicação de henna.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Revestimento de Exteriores</h4>
+                    <p>Fachadas, varandas, áreas externas e muros com proteção contra intempéries.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="servico-card">
                 <div class="servico-imagem">
-                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=80" alt="Maquiagem">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" alt="Obras de Alvenaria">
                 </div>
                 <div class="servico-info">
-                    <h4>Maquiagem Profissional</h4>
-                    <p>Maquiagem social, para eventos, noivas e produções fotográficas.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Obras de Alvenaria</h4>
+                    <p>Construção, reparo e reforma de paredes, muros e estruturas de alvenaria.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
             <div class="servico-card">
                 <div class="servico-imagem">
                     <span class="servico-tag novo">Novo</span>
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&q=80" alt="Tratamento Capilar">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&q=80" alt="Reformas em Geral">
                 </div>
                 <div class="servico-info">
-                    <h4>Tratamento Capilar</h4>
-                    <p>Hidratação, reconstrução e nutrição para cabelos saudáveis e brilhantes.</p>
-                    <div class="servico-preco">Sob consulta <small>agende sua avaliação</small></div>
-                    <a href="https://wa.me/5586994761256" target="_blank" class="btn-add">💬 Agendar</a>
+                    <h4>Reformas em Geral</h4>
+                    <p>Projetos completos de reforma residencial e comercial com acabamento profissional.</p>
+                    <div class="servico-preco">Sob consulta <small>orçamento personalizado</small></div>
+                    <a href="https://wa.me/5551994505803" target="_blank" class="btn-add">💬 Solicitar Orçamento</a>
                 </div>
             </div>
 
@@ -379,22 +377,22 @@
                 <h3>Dados da Empresa</h3>
             </div>
             <div class="dados-grid">
-                <div class="dado-item"><strong>CNPJ</strong><span>58.551.728/0001-91</span></div>
-                <div class="dado-item"><strong>Razão Social</strong><span>58.551.728 Erica Verissima Alves dos Santos</span></div>
-                <div class="dado-item"><strong>Data da Abertura</strong><span>25/12/2024 — 1 ano, 9 meses e 12 dias</span></div>
+                <div class="dado-item"><strong>CNPJ</strong><span>66.189.844/0001-30</span></div>
+                <div class="dado-item"><strong>Razão Social</strong><span>66.189.844 Iuri Lucas Camargo Antunes</span></div>
+                <div class="dado-item"><strong>Data da Abertura</strong><span>10/04/2026 — há 5 meses e 26 dias</span></div>
                 <div class="dado-item"><strong>Porte</strong><span>Microempreendedor Individual (MEI)</span></div>
                 <div class="dado-item"><strong>Natureza Jurídica</strong><span>Empresário (Individual)</span></div>
                 <div class="dado-item"><strong>Opção pelo MEI</strong><span>Sim</span></div>
-                <div class="dado-item"><strong>Opção pelo Simples</strong><span>Sim — desde 25/12/2024</span></div>
-                <div class="dado-item"><strong>Capital Social</strong><span>R$ 10.000,00</span></div>
+                <div class="dado-item"><strong>Opção pelo Simples</strong><span>Sim — desde 10/04/2026</span></div>
+                <div class="dado-item"><strong>Capital Social</strong><span>R$ 1,50</span></div>
                 <div class="dado-item"><strong>Tipo</strong><span>Matriz</span></div>
                 <div class="dado-item"><strong>Situação</strong><span><span class="status-ativa">Ativa</span></span></div>
-                <div class="dado-item"><strong>Data Situação Cadastral</strong><span>25/12/2024</span></div>
+                <div class="dado-item"><strong>Data Situação Cadastral</strong><span>10/04/2026</span></div>
             </div>
             <div class="cnae-box">
                 <strong>Atividade Principal — CNAE</strong>
-                <p>96.02-5-02 — Atividades de estética e outros serviços de cuidados com a beleza</p>
-                <p class="sec">📎 Secundária: 90.01-9-02 — Produção musical</p>
+                <p>43.30-4-05 — Aplicação de revestimentos e de resinas em interiores e exteriores</p>
+                <p class="sec">📎 Secundária: 43.99-1-03 — Obras de alvenaria</p>
             </div>
         </div>
     </section>
@@ -413,21 +411,21 @@
                     <span class="ico">📧</span>
                     <div>
                         <strong>E-mail</strong><br>
-                        <a href="mailto:inovassessoriacontabil@gmail.com">inovassessoriacontabil@gmail.com</a>
+                        <a href="mailto:camargoiurilucas@gmail.com">camargoiurilucas@gmail.com</a>
                     </div>
                 </div>
                 <div class="contato-linha">
                     <span class="ico">📱</span>
                     <div>
                         <strong>Telefone / WhatsApp</strong><br>
-                        <a href="tel:+5586994761256">(86) 99476-1256</a>
+                        <a href="tel:+5551994505803">(51) 99450-5803</a>
                     </div>
                 </div>
                 <div class="contato-linha">
                     <span class="ico">💬</span>
                     <div>
                         <strong>WhatsApp Direto</strong><br>
-                        <a href="https://wa.me/5586994761256" target="_blank">Chamar no WhatsApp</a>
+                        <a href="https://wa.me/5551994505803" target="_blank">Chamar no WhatsApp</a>
                     </div>
                 </div>
 
@@ -436,32 +434,32 @@
                     <span class="ico">🏠</span>
                     <div>
                         <strong>Logradouro</strong><br>
-                        Rua Itauna, 1067
+                        Rua Francisco Martins, 654
                     </div>
                 </div>
                 <div class="contato-linha">
                     <span class="ico">🏘️</span>
                     <div>
                         <strong>Bairro</strong><br>
-                        Pindorama
+                        Cascata
                     </div>
                 </div>
                 <div class="contato-linha">
                     <span class="ico">🏙️</span>
                     <div>
                         <strong>Cidade / Estado</strong><br>
-                        Parnaíba — Piauí
+                        Porto Alegre — Rio Grande do Sul
                     </div>
                 </div>
                 <div class="contato-linha">
                     <span class="ico">📮</span>
                     <div>
                         <strong>CEP</strong><br>
-                        64215-319
+                        91712-150
                     </div>
                 </div>
 
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Itauna+1067+Pindorama+Parnaíba+PI+64215-319" 
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Francisco+Martins+654+Cascata+Porto+Alegre+RS+91712-150" 
                    target="_blank" 
                    class="btn btn-whats" 
                    style="margin-top:20px;">
@@ -471,7 +469,7 @@
 
             <div class="contato-card contato-mapa">
                 <iframe 
-                    src="https://www.google.com/maps?q=Rua+Itauna,+1067,+Pindorama,+Parnaíba,+PI,+64215-319&output=embed"
+                    src="https://www.google.com/maps?q=Rua+Francisco+Martins,+654,+Cascata,+Porto+Alegre,+RS,+91712-150&output=embed"
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
@@ -487,26 +485,26 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-col">
-            <h4>💅 Erica Verissima Alves dos Santos</h4>
-            <p>Atividades de estética e outros serviços de cuidados com a beleza em Parnaíba - PI.</p>
-            <p style="margin-top:12px;"><strong style="color:#fff;">CNPJ:</strong> 58.551.728/0001-91</p>
-            <p><strong style="color:#fff;">Razão Social:</strong> 58.551.728 Erica Verissima Alves dos Santos</p>
+            <h4>🎨 Iuri Lucas Camargo Antunes</h4>
+            <p>Aplicação de revestimentos e resinas em interiores e exteriores em Porto Alegre - RS.</p>
+            <p style="margin-top:12px;"><strong style="color:#fff;">CNPJ:</strong> 66.189.844/0001-30</p>
+            <p><strong style="color:#fff;">Razão Social:</strong> 66.189.844 Iuri Lucas Camargo Antunes</p>
         </div>
 
         <div class="footer-col">
             <h4>📞 Contato</h4>
-            <p>📧 <a href="mailto:inovassessoriacontabil@gmail.com">inovassessoriacontabil@gmail.com</a></p>
-            <p>📱 <a href="tel:+5586994761256">(86) 99476-1256</a></p>
-            <p>💬 <a href="https://wa.me/5586994761256" target="_blank">WhatsApp</a></p>
+            <p>📧 <a href="mailto:camargoiurilucas@gmail.com">camargoiurilucas@gmail.com</a></p>
+            <p>📱 <a href="tel:+5551994505803">(51) 99450-5803</a></p>
+            <p>💬 <a href="https://wa.me/5551994505803" target="_blank">WhatsApp</a></p>
         </div>
 
         <div class="footer-col">
             <h4>📍 Localização</h4>
-            <p>Rua Itauna, 1067</p>
-            <p>Bairro Pindorama</p>
-            <p>Parnaíba — PI</p>
-            <p>CEP: 64215-319</p>
-            <p style="margin-top:8px;"><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Itauna+1067+Pindorama+Parnaíba+PI+64215-319" target="_blank">Ver no Google Maps →</a></p>
+            <p>Rua Francisco Martins, 654</p>
+            <p>Bairro Cascata</p>
+            <p>Porto Alegre — RS</p>
+            <p>CEP: 91712-150</p>
+            <p style="margin-top:8px;"><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Francisco+Martins+654+Cascata+Porto+Alegre+RS+91712-150" target="_blank">Ver no Google Maps →</a></p>
         </div>
 
         <div class="footer-col">
@@ -521,15 +519,15 @@
             <h4>🕒 Horário</h4>
             <div class="footer-horario">
                 <div class="hora" id="horarioFooter">Carregando...</div>
-                <p style="font-size:0.8rem; margin:0; opacity:0.85;">Segunda a Sábado — 08h às 19h</p>
+                <p style="font-size:0.8rem; margin:0; opacity:0.85;">Segunda a Sábado — 08h às 18h</p>
             </div>
         </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2024 58.551.728 Erica Verissima Alves dos Santos — CNPJ: 58.551.728/0001-91. Todos os direitos reservados.</p>
-        <p>Atividade Principal: 96.02-5-02 — Atividades de estética e outros serviços de cuidados com a beleza.</p>
-        <p>Situação Cadastral: Ativa | MEI | Simples Nacional | Abertura: 25/12/2024</p>
+        <p>&copy; 2026 66.189.844 Iuri Lucas Camargo Antunes — CNPJ: 66.189.844/0001-30. Todos os direitos reservados.</p>
+        <p>Atividade Principal: 43.30-4-05 — Aplicação de revestimentos e de resinas em interiores e exteriores.</p>
+        <p>Situação Cadastral: Ativa | MEI | Simples Nacional | Abertura: 10/04/2026</p>
     </div>
 </footer>
 
